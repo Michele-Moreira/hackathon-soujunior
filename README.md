@@ -22,4 +22,4 @@ npm run dev
 
 ## Organização
 
-Convenções do projeto em `AGENTS.md` e layout de `src/` em `docs/estrutura.md`.
+Convenções do projeto em `CLAUDE.md` e layout de `src/` em `docs/estrutura.md`.

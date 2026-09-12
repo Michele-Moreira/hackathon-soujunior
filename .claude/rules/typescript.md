@@ -1,7 +1,6 @@
 ---
-description: TypeScript strict, sem any, imports type-only, validação com zod
-globs: **/*.{ts,tsx}
-alwaysApply: false
+paths:
+  - "**/*.{ts,tsx}"
 ---
 
 # TypeScript

@@ -26,7 +26,7 @@ Revisa uma mudança de UI sob três lentes. Reporte achados concretos (arquivo +
 - Usa tokens semânticos do tema (`bg-background`, `text-muted-foreground`) e não cores cruas.
 - Espaçamento/raio/tipografia saem da escala do Tailwind, sem valores arbitrários sem motivo.
 - Reaproveita componentes existentes (incl. shadcn) em vez de recriar.
-- Segue `.cursor/rules/styling.mdc`.
+- Segue `.claude/rules/styling.md`.
 
 ## Saída
 

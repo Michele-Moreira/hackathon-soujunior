@@ -1,7 +1,6 @@
 ---
-description: Componentes de função, hooks, props tipadas, composição
-globs: **/*.tsx
-alwaysApply: false
+paths:
+  - "**/*.tsx"
 ---
 
 # React

@@ -1,7 +1,6 @@
 ---
-description: kebab-case em arquivos, PascalCase em componentes, convenções de handlers
-globs: **/*.{ts,tsx}
-alwaysApply: false
+paths:
+  - "**/*.{ts,tsx}"
 ---
 
 # Naming

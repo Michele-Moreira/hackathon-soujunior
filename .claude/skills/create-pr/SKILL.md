@@ -151,5 +151,5 @@ Motivos: summary vazio de contexto, emoji/menção de IA, co-author trailer. Os 
 
 ## Regras relacionadas
 
-- `.cursor/skills/git-commit/SKILL.md` — mesmas regras de título Conventional Commits
-- `.cursor/rules/conventional-commits.mdc` — spec do formato
+- `.claude/skills/git-commit/SKILL.md` — mesmas regras de título Conventional Commits
+- `.claude/rules/conventional-commits.md` — spec do formato

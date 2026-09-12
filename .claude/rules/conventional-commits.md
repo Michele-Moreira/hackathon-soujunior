@@ -1,8 +1,3 @@
----
-description: Formato Conventional Commits com escopo obrigatório, minúsculo, em inglês
-alwaysApply: false
----
-
 # Conventional Commits
 
 Formato: `<type>(<scope>): <description>` — minúsculo, em inglês, imperativo.

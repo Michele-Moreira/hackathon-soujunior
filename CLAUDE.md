@@ -1,4 +1,4 @@
-# AGENTS.md
+# CLAUDE.md
 
 Instruções do projeto para o assistente. Estas regras valem para todo o repositório.
 
@@ -19,13 +19,13 @@ Instruções do projeto para o assistente. Estas regras valem para todo o reposi
 
 ## Convenções
 
-As regras detalhadas vivem em `.cursor/rules/` e são carregadas conforme o escopo. Consulte conforme a tarefa:
+As regras detalhadas vivem em `.claude/rules/`. As que têm `paths` no cabeçalho carregam só quando o arquivo casa com o padrão; as sem `paths` carregam sempre:
 
-- `typescript.mdc` — tipagem, `strict`, sem `any`, imports type-only.
-- `react.mdc` — componentes de função, regras de hooks, props, onde mora o estado.
-- `styling.mdc` — Tailwind, `cn()`, tokens, uso de shadcn/ui.
-- `naming-conventions.mdc` — nomes de arquivos, componentes, hooks.
-- `conventional-commits.mdc` — formato de commit.
+- `typescript.md` — tipagem, `strict`, sem `any`, imports type-only.
+- `react.md` — componentes de função, regras de hooks, props, onde mora o estado.
+- `styling.md` — Tailwind, `cn()`, tokens, uso de shadcn/ui.
+- `naming-conventions.md` — nomes de arquivos, componentes, hooks.
+- `conventional-commits.md` — formato de commit.
 
 ## Estrutura de pastas
 
@@ -46,6 +46,6 @@ src/
 
 - **Commits:** skill `git-commit` (Conventional Commits, lowercase em inglês, escopo obrigatório, sem co-author/IA).
 - **Pull requests:** skill `create-pr` (título Conventional Commits, corpo Summary + Test plan em inglês, sem reviewers/draft/IA).
-- **Revisão:** use `/code-review` antes de abrir PR; o subagent `code-reviewer` cobre correção + convenções.
+- **Revisão:** use `/diff-review` antes de abrir PR; o subagent `code-reviewer` cobre correção + convenções.
 - **Testes:** o subagent `test-runner` roda Vitest/Playwright e reporta.
 - **Bugs:** o subagent `debugger` faz debugging sistemático antes de propor correção.

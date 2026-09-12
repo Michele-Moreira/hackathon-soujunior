@@ -15,7 +15,7 @@ Commits deste projeto seguem regras fixas, fáceis de quebrar na pressa:
 - **Nenhuma menção** a Cursor, IA, Claude, Copilot ou qualquer IDE. O código é autoria do dono do repo.
 - A skill **commita, mas não dá push** — push é decisão explícita.
 
-Esta skill mantém essas invariantes independentemente de como o pedido foi formulado. Spec do formato em `.cursor/rules/conventional-commits.mdc`.
+Esta skill mantém essas invariantes independentemente de como o pedido foi formulado. Spec do formato em `.claude/rules/conventional-commits.md`.
 
 ## Steps
 
@@ -125,5 +125,5 @@ Um commit com qualquer `Co-authored-by`, emoji de IA ou rodapé "Generated with 
 
 ## Regras relacionadas
 
-- `.cursor/rules/conventional-commits.mdc` — spec do formato
-- `.cursor/rules/naming-conventions.mdc` — nomes que dispensam comentário
+- `.claude/rules/conventional-commits.md` — spec do formato
+- `.claude/rules/naming-conventions.md` — nomes que dispensam comentário

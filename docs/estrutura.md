@@ -1,6 +1,6 @@
 # Estrutura de `src/`
 
-Layout que as convenções (`.cursor/rules/`) assumem. A ideia é que cada pasta tenha um propósito único e previsível.
+Layout que as convenções (`.claude/rules/`) assumem. A ideia é que cada pasta tenha um propósito único e previsível.
 
 ```
 src/

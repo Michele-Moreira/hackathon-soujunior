@@ -1,7 +1,6 @@
 ---
-description: Tailwind, cn(), tokens semânticos, shadcn/ui, acessibilidade
-globs: **/*.{tsx,css}
-alwaysApply: false
+paths:
+  - "**/*.{tsx,css}"
 ---
 
 # Estilo (Tailwind + shadcn/ui)
