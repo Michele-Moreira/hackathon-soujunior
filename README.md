@@ -2,6 +2,8 @@
 
 Projeto do time para o hackathon da SouJunior.
 
+**No ar:** https://hackathon-soujunior.vercel.app
+
 ## Stack
 
 Vite + React + TypeScript + Tailwind CSS + shadcn/ui. Deploy na Vercel.
