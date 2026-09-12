@@ -8,12 +8,14 @@ Projeto do time para o hackathon da SouJunior.
 
 **SquadForce**
 
-- Cauã Ventura
-- Daniel Ferreira
-- Henrique Camello
-- Ingrid Oliveira
-- Márlon Almeida
-- Michele Moreira
+| Nome | Papel | LinkedIn |
+|---|---|---|
+| Cauã Ventura | Dev Back-End | [cauã-ventura](https://www.linkedin.com/in/cau%C3%A3-ventura-835657257/) |
+| Daniel Ferreira | Analista Q.A | [daniel-ferreira](https://www.linkedin.com/in/daniel-ferreira-b26626258) |
+| Henrique Camello | Tech Lead · Mentor | [henrique-camello](https://www.linkedin.com/in/henrique-camello-b4831aa4/) |
+| Ingrid Oliveira | UX/UI Designer | [ingrid-ferreira-oliveira](https://www.linkedin.com/in/ingrid-ferreira-oliveira/) |
+| Márlon Almeida | Dados | [marlonmalmeida](https://www.linkedin.com/in/marlonmalmeida/) |
+| Michele Moreira | Dev Front-End | [mikaut](https://www.linkedin.com/in/mikaut/) |
 
 ## Stack
 
