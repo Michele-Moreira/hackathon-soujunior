@@ -1,0 +1,131 @@
+backend:
+  name: github
+  repo: Michele-Moreira/hackathon-soujunior
+  branch: main
+  base_url: https://hackathon-soujunior.vercel.app
+  auth_endpoint: api/auth
+  commit_messages:
+    update: 'content(site): update {{collection}} from the cms'
+
+local_backend: true
+
+locale: pt
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: site
+    label: Conteúdo do site
+    editor:
+      preview: false
+    files:
+      - name: landing
+        label: Landing page
+        file: src/content/site.json
+        format: json
+        fields:
+          - name: header
+            label: Cabeçalho
+            widget: object
+            fields:
+              - name: nav
+                label: Menu de navegação
+                label_singular: Item do menu
+                widget: list
+                fields:
+                  - { name: label, label: Texto, widget: string }
+                  - { name: href, label: Âncora da seção, widget: string, hint: 'Aponta para uma seção da página, como #missao. Só mude se a seção mudar de nome.' }
+              - { name: supportLabel, label: Texto do botão de apoio, widget: string }
+
+          - name: hero
+            label: Tela inicial
+            widget: object
+            fields:
+              - { name: eyebrow, label: Etiqueta, widget: string, hint: 'Texto pequeno acima do título.' }
+              - { name: title, label: Título, widget: string }
+              - { name: description, label: Descrição, widget: text }
+              - { name: supportLabel, label: Texto do botão de apoio, widget: string }
+
+          - name: mission
+            label: Nossa missão
+            widget: object
+            fields:
+              - { name: eyebrow, label: Etiqueta, widget: string }
+              - { name: title, label: Título, widget: string }
+              - { name: description, label: Descrição, widget: text }
+              - name: cards
+                label: Caixas de missão e visão
+                label_singular: Caixa
+                widget: list
+                fields:
+                  - { name: title, label: Título, widget: string }
+                  - { name: text, label: Texto, widget: text, required: false, hint: 'Enquanto estiver vazio, a caixa mostra o espaço reservado do wireframe.' }
+
+          - name: whatWeDo
+            label: Atuação
+            widget: object
+            fields:
+              - { name: eyebrow, label: Etiqueta, widget: string }
+              - { name: title, label: Título, widget: string }
+              - { name: description, label: Descrição, widget: text }
+
+          - name: impact
+            label: Impacto
+            widget: object
+            fields:
+              - { name: eyebrow, label: Etiqueta, widget: string }
+              - { name: title, label: Título, widget: string }
+              - { name: description, label: Descrição, widget: text }
+
+          - name: funding
+            label: Financiamento
+            widget: object
+            fields:
+              - { name: eyebrow, label: Etiqueta, widget: string }
+              - { name: title, label: Título, widget: string }
+              - { name: description, label: Descrição, widget: text }
+
+          - name: community
+            label: Faça parte
+            widget: object
+            fields:
+              - { name: eyebrow, label: Etiqueta, widget: string }
+              - { name: title, label: Título, widget: string }
+              - { name: description, label: Descrição, widget: text }
+              - name: channels
+                label: Canais da comunidade
+                widget: object
+                fields:
+                  - name: discord
+                    label: Discord
+                    widget: object
+                    fields:
+                      - { name: name, label: Nome, widget: string }
+                      - { name: description, label: Descrição, widget: string }
+                  - name: whatsapp
+                    label: WhatsApp
+                    widget: object
+                    fields:
+                      - { name: name, label: Nome, widget: string }
+                      - { name: description, label: Descrição, widget: string }
+                  - name: github
+                    label: GitHub
+                    widget: object
+                    fields:
+                      - { name: name, label: Nome, widget: string }
+                      - { name: description, label: Descrição, widget: string }
+
+          - name: support
+            label: Apoie
+            widget: object
+            fields:
+              - { name: eyebrow, label: Etiqueta, widget: string }
+              - { name: title, label: Título, widget: string }
+              - { name: description, label: Descrição, widget: text }
+              - { name: supportLabel, label: Texto do botão de apoio, widget: string }
+
+          - name: footer
+            label: Rodapé
+            widget: object
+            fields:
+              - { name: copyright, label: Direitos autorais, widget: string }

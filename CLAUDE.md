@@ -39,6 +39,7 @@ src/
 ├── lib/             # cn(), utils, clients
 ├── pages/           # páginas / rotas
 ├── types/           # tipos compartilhados
+├── content/        # textos da página em JSON (painel em /admin)
 └── styles/          # globals, tokens
 ```
 

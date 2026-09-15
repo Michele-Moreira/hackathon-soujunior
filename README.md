@@ -19,6 +19,43 @@ A SouJunior é uma comunidade que ajuda profissionais em início de carreira com
 | Apoie! | Chamada final para apoiar a campanha no Apoia.se a partir de R$ 2,00 |
 | Rodapé | Links para o Apoia.se, WhatsApp, GitHub e Discord |
 
+## Conteúdo da página
+
+Todo o texto que aparece na página mora em `src/content/site.json` — nenhuma seção tem texto escrito dentro do componente. Para trocar uma palavra, um título ou um número, é esse arquivo que muda.
+
+Dá para editar de duas formas:
+
+**1. Pelo painel, em `/admin`** — o [Decap CMS](https://decapcms.org/docs/intro/) abre um formulário no navegador, você entra com a conta do GitHub e, ao salvar, ele gera um commit no repositório sozinho. A Vercel publica em seguida. Serve para quem não mexe no código.
+
+**2. Direto no arquivo** — abrir `src/content/site.json` e editar o valor.
+
+### Configuração do painel
+
+O painel vive em `public/admin/` (`index.html` carrega o Decap, `config.yml` descreve os campos). O login pelo GitHub usa duas funções em `api/`, que na Vercel viram endpoints:
+
+| Arquivo | Endpoint | O que faz |
+|---|---|---|
+| `api/auth.js` | `/api/auth` | leva para a tela de autorização do GitHub |
+| `api/callback.js` | `/api/callback` | troca o código pelo token e devolve para o painel |
+
+Para funcionar, o projeto na Vercel precisa de duas variáveis de ambiente, vindas de um [OAuth App do GitHub](https://github.com/settings/developers) com callback em `https://hackathon-soujunior.vercel.app/api/callback`:
+
+| Variável | Onde achar |
+|---|---|
+| `GITHUB_CLIENT_ID` | na página do OAuth App |
+| `GITHUB_CLIENT_SECRET` | gerado no botão *Generate a new client secret* |
+
+Só quem tem acesso de escrita no repositório consegue salvar pelo painel.
+
+### Editando o conteúdo local
+
+```bash
+npx decap-server   # em um terminal
+npm run dev        # em outro, e abrir http://localhost:5173/admin/
+```
+
+O `local_backend: true` do `config.yml` faz o painel salvar no arquivo da sua máquina em vez do GitHub, sem pedir login.
+
 ## Squad
 
 **SquadForce**
@@ -58,6 +95,7 @@ npm run dev
 | `npm run dev` | sobe o servidor local |
 | `npm run build` | checa os tipos e gera a versão de produção em `dist/` |
 | `npm run lint` | roda o oxlint |
+| `npx decap-server` | sobe o servidor local do painel de conteúdo |
 | `npx shadcn@latest add <componente>` | adiciona um componente do shadcn em `src/components/ui/` |
 
 ## Organização

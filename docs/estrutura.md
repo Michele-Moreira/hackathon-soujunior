@@ -11,6 +11,7 @@ src/
 ├── lib/             # utilitários sem estado: cn(), formatadores, clients de API
 ├── pages/           # páginas / rotas da aplicação
 ├── types/           # tipos e interfaces compartilhados entre módulos
+├── content/         # textos da página em JSON, editáveis pelo painel em /admin
 └── styles/          # estilos globais, configuração de tokens
 ```
 
@@ -34,3 +35,12 @@ src/
 ## shadcn/ui
 
 Componentes gerados via `npx shadcn@latest add <componente>` aterrissam em `src/components/ui/`. Trate-os como código do projeto: pode customizar, mas mantenha a API consistente. Veja a skill `shadcn`.
+
+## Conteúdo
+
+`src/content/site.json` guarda todo o texto visível da página. Componente não carrega texto escrito à mão: ele
+importa o JSON e lê o campo. O painel do Decap em `public/admin/config.yml` espelha esse arquivo campo a campo —
+ao mexer na estrutura do JSON, mexa no `config.yml` junto, senão o painel apaga o que não conhece ao salvar.
+
+Ficam fora do JSON os textos de acessibilidade e navegação assistiva (`aria-label`, link de pular para o
+conteúdo, aviso de "abre em nova aba") e o `<title>` do `index.html`: são estrutura, não conteúdo editável.
