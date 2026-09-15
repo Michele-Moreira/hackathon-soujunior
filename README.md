@@ -1,8 +1,20 @@
 # Hackathon SouJunior
 
-Projeto do time para o hackathon da SouJunior.
+Landing page da campanha da [SouJunior no Apoia.se](https://apoia.se/soujunior), criada pela squad **SquadForce** no hackathon Desafio Junior (11 a 25 de setembro de 2026).
+
+A SouJunior é uma comunidade que ajuda profissionais em início de carreira com mentorias gratuitas e projetos open source, e se mantém com o apoio da própria comunidade. A página conta essa história, mostra como as doações sustentam a comunidade e o impacto que ela gera, e leva o visitante a apoiar a campanha a partir de R$ 2,00.
 
 **No ar:** https://hackathon-soujunior.vercel.app
+
+## O que a página tem
+
+| Seção | Objetivo |
+|---|---|
+| Hero | Responder em poucos segundos por que apoiar a SouJunior, com o botão principal para o Apoia.se |
+| Causa | Mostrar como as doações mantêm a infraestrutura, as mentorias e os projetos open source |
+| Impacto | Apresentar os números da comunidade |
+| Planos | Explicar os níveis de apoio a partir de R$ 2,00 |
+| Rodapé | Links para o Apoia.se, Discord, WhatsApp e GitHub |
 
 ## Squad
 
