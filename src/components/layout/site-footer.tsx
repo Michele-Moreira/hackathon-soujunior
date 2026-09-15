@@ -2,6 +2,7 @@ import { ApoiaSeIcon } from '@/components/layout/apoia-se-icon'
 import { BrandIcon } from '@/components/layout/brand-icon'
 import { ExternalLink } from '@/components/layout/external-link'
 import { SouJuniorLogo } from '@/components/layout/soujunior-logo'
+import content from '@/content/site.json'
 import { DISCORD_ICON_PATH, GITHUB_ICON_PATH, WHATSAPP_ICON_PATH } from '@/lib/brand-icons'
 import { APOIA_SE_URL, DISCORD_URL, GITHUB_URL, WHATSAPP_URL } from '@/lib/links'
 
@@ -17,7 +18,7 @@ export function SiteFooter() {
     <footer className="bg-muted px-4 py-8 text-foreground md:px-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 md:flex-row md:justify-between">
         <SouJuniorLogo className="h-7" />
-        <p className="text-sm">© 2026 SouJunior</p>
+        <p className="text-sm">{content.footer.copyright}</p>
         <ul className="flex items-center gap-4">
           {SOCIAL_LINKS.map((link) => (
             <li key={link.label}>
