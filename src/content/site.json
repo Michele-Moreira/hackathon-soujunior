@@ -1,54 +1,71 @@
 {
-  "header": {
-    "nav": [
-      { "label": "Início", "href": "#inicio" },
-      { "label": "Missão", "href": "#missao" },
-      { "label": "Atuação", "href": "#atuacao" },
-      { "label": "Impacto", "href": "#impacto" },
-      { "label": "Financiamento", "href": "#financiamento" },
-      { "label": "Faça parte", "href": "#faca-parte" }
-    ],
-    "supportLabel": "Apoie"
-  },
-  "hero": {
-    "eyebrow": "Início",
-    "title": "Apoie quem está construindo o próprio amanhã",
-    "description": "A SouJunior transforma o aprendizado em experiência real e o seu apoio ajuda esse trabalho a continuar.",
-    "supportLabel": "Apoie a partir de R$ 2,00"
-  },
-  "mission": {
-    "eyebrow": "Nossa missão",
-    "title": "Criamos oportunidades para novos talentos em tecnologia",
-    "description": "Uma comunidade que abre portas para quem está começando na área.",
-    "cards": [
-      { "title": "Missão", "text": "" },
-      { "title": "Visão", "text": "" }
-    ]
-  },
-  "whatWeDo": {
-    "eyebrow": "Atuação",
-    "title": "Transformamos aprendizado em experiência prática",
-    "description": "Mentorias, projetos open source e uma comunidade ativa para ganhar experiência de verdade."
-  },
   "impact": {
     "eyebrow": "Impacto",
     "title": "Uma rede em constante movimento",
     "description": "Os números que mostram a força da comunidade."
-  },
-  "funding": {
-    "eyebrow": "Financiamento",
-    "title": "Da contribuição à continuidade das iniciativas",
-    "description": "Cada contribuição ajuda a manter a estrutura que sustenta a comunidade e os projetos da SouJunior."
   },
   "community": {
     "eyebrow": "Faça parte",
     "title": "Conexões também movem a comunidade",
     "description": "Além de doar, você pode fortalecer a SouJunior participando dos canais oficiais.",
     "channels": {
-      "discord": { "name": "Discord", "description": "Tire dúvidas e participe da comunidade" },
-      "whatsapp": { "name": "WhatsApp", "description": "Receba os avisos oficiais" },
-      "github": { "name": "GitHub", "description": "Contribua com os projetos open source" }
+      "discord": {
+        "name": "Discord",
+        "description": "Tire dúvidas e participe da comunidade"
+      },
+      "whatsapp": {
+        "name": "WhatsApp",
+        "description": "Receba os avisos oficiais"
+      },
+      "github": {
+        "name": "GitHub",
+        "description": "Contribua com os projetos open source"
+      }
     }
+  },
+  "mission": {
+    "eyebrow": "Nossa missão",
+    "title": "Criamos oportunidades para novos talentos em tecnologia",
+    "description": "Uma comunidade que abre portas para quem está começando na área.",
+    "cards": [
+      {
+        "title": "Missão",
+        "text": ""
+      },
+      {
+        "title": "Visão",
+        "text": ""
+      }
+    ]
+  },
+  "header": {
+    "nav": [
+      {
+        "label": "Início ><",
+        "href": "#inicio"
+      },
+      {
+        "label": "Missão",
+        "href": "#missao"
+      },
+      {
+        "label": "Atuação",
+        "href": "#atuacao"
+      },
+      {
+        "label": "Impacto",
+        "href": "#impacto"
+      },
+      {
+        "label": "Financiamento",
+        "href": "#financiamento"
+      },
+      {
+        "label": "Faça parte",
+        "href": "#faca-parte"
+      }
+    ],
+    "supportLabel": "Apoie"
   },
   "support": {
     "eyebrow": "Apoie",
@@ -56,7 +73,23 @@
     "description": "Toda contribuição conta. Escolha um valor abaixo ou defina o seu no Apoia.se.",
     "supportLabel": "Apoiar pelo Apoia.se"
   },
+  "hero": {
+    "eyebrow": "Início",
+    "title": "Apoie quem está construindo o próprio amanhã",
+    "description": "A SouJunior transforma o aprendizado em experiência real e o seu apoio ajuda esse trabalho a continuar.",
+    "supportLabel": "Apoie a partir de R$ 2,00"
+  },
   "footer": {
     "copyright": "© 2026 SouJunior"
+  },
+  "whatWeDo": {
+    "eyebrow": "Atuação",
+    "title": "Transformamos aprendizado em experiência prática",
+    "description": "Mentorias, projetos open source e uma comunidade ativa para ganhar experiência de verdade."
+  },
+  "funding": {
+    "eyebrow": "Financiamento",
+    "title": "Da contribuição à continuidade das iniciativas",
+    "description": "Cada contribuição ajuda a manter a estrutura que sustenta a comunidade e os projetos da SouJunior."
   }
 }
