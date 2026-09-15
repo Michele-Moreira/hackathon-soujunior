@@ -2,7 +2,25 @@
   "impact": {
     "eyebrow": "Impacto",
     "title": "Uma rede em constante movimento",
-    "description": "Os números que mostram a força da comunidade."
+    "description": "Os números que mostram a força da comunidade.",
+    "stats": [
+      {
+        "value": "",
+        "label": ""
+      },
+      {
+        "value": "",
+        "label": ""
+      },
+      {
+        "value": "",
+        "label": ""
+      },
+      {
+        "value": "",
+        "label": ""
+      }
+    ]
   },
   "community": {
     "eyebrow": "Faça parte",
@@ -90,6 +108,24 @@
   "funding": {
     "eyebrow": "Financiamento",
     "title": "Da contribuição à continuidade das iniciativas",
-    "description": "Cada contribuição ajuda a manter a estrutura que sustenta a comunidade e os projetos da SouJunior."
+    "description": "Cada contribuição ajuda a manter a estrutura que sustenta a comunidade e os projetos da SouJunior.",
+    "expenses": [
+      {
+        "service": "",
+        "amount": 0
+      },
+      {
+        "service": "",
+        "amount": 0
+      },
+      {
+        "service": "",
+        "amount": 0
+      },
+      {
+        "service": "",
+        "amount": 0
+      }
+    ]
   }
 }
