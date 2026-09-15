@@ -5,7 +5,7 @@ import content from '@/content/site.json'
 
 const FUNDING_SLOTS = ['primeiro', 'segundo', 'terceiro', 'quarto']
 
-export function SupportImpactSection() {
+export function FundingSection() {
   const { eyebrow, title, description } = content.funding
 
   return (

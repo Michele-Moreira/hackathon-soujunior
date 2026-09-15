@@ -10,7 +10,7 @@ const COMMUNITY_CHANNELS = [
   { id: 'github', href: GITHUB_URL },
 ] as const
 
-export function OtherWaysSection() {
+export function CommunitySection() {
   const { eyebrow, title, description, channels } = content.community
 
   return (

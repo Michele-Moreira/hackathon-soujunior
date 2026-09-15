@@ -6,7 +6,7 @@ import content from '@/content/site.json'
 
 const TIER_SLOTS = ['primeiro', 'segundo', 'terceiro', 'quarto']
 
-export function SupportCtaSection() {
+export function SupportSection() {
   const { eyebrow, title, description, supportLabel } = content.support
 
   return (

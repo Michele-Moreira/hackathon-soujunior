@@ -1,11 +1,11 @@
 import { SiteFooter } from '@/components/layout/site-footer'
 import { SiteHeader } from '@/components/layout/site-header'
+import { CommunitySection } from '@/components/sections/community-section'
+import { FundingSection } from '@/components/sections/funding-section'
 import { HeroSection } from '@/components/sections/hero-section'
 import { ImpactSection } from '@/components/sections/impact-section'
 import { MissionSection } from '@/components/sections/mission-section'
-import { OtherWaysSection } from '@/components/sections/other-ways-section'
-import { SupportCtaSection } from '@/components/sections/support-cta-section'
-import { SupportImpactSection } from '@/components/sections/support-impact-section'
+import { SupportSection } from '@/components/sections/support-section'
 import { WhatWeDoSection } from '@/components/sections/what-we-do-section'
 
 export function App() {
@@ -23,9 +23,9 @@ export function App() {
         <MissionSection />
         <WhatWeDoSection />
         <ImpactSection />
-        <SupportImpactSection />
-        <OtherWaysSection />
-        <SupportCtaSection />
+        <FundingSection />
+        <CommunitySection />
+        <SupportSection />
       </main>
       <SiteFooter />
     </>
