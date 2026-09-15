@@ -115,6 +115,9 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth motion-reduce:scroll-auto;
+    }
   * {
     @apply border-border outline-ring/50;
     }
