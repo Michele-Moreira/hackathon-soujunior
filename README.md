@@ -8,16 +8,20 @@ A SouJunior é uma comunidade que ajuda profissionais em início de carreira com
 
 ## O que a página tem
 
-| Seção | Objetivo |
-|---|---|
-| Tela inicial | Responder em poucos segundos por que apoiar a SouJunior, com o botão principal para o Apoia.se |
-| Nossa missão | Apresentar a SouJunior e as oportunidades que ela cria para novos talentos em tecnologia |
-| O que fazemos | Mostrar as iniciativas que transformam aprendizado em experiência prática |
-| Nosso impacto | Apresentar os números da comunidade |
-| Como o seu apoio ajuda | Mostrar como as doações mantêm as iniciativas funcionando |
-| Outras formas de ajudar | Mostrar como participar da comunidade além da doação |
-| Apoie! | Chamada final para apoiar a campanha no Apoia.se a partir de R$ 2,00 |
-| Rodapé | Links para o Apoia.se, WhatsApp, GitHub e Discord |
+Na ordem em que aparecem na página. O nome do arquivo é sempre a chave da seção em `src/content/site.json`.
+
+| Seção | Arquivo | Objetivo |
+|---|---|---|
+| Início | `sections/hero-section.tsx` | Responder em poucos segundos por que apoiar a SouJunior, com o botão principal para o Apoia.se |
+| Nossa missão | `sections/mission-section.tsx` | Apresentar a SouJunior e as oportunidades que ela cria para novos talentos em tecnologia |
+| Atuação | `sections/what-we-do-section.tsx` | Mostrar as iniciativas que transformam aprendizado em experiência prática |
+| Impacto | `sections/impact-section.tsx` | Apresentar os números da comunidade |
+| Financiamento | `sections/funding-section.tsx` | Mostrar como as doações mantêm as iniciativas funcionando |
+| Faça parte | `sections/community-section.tsx` | Mostrar como participar da comunidade além da doação |
+| Apoie | `sections/support-section.tsx` | Chamada final para apoiar a campanha no Apoia.se a partir de R$ 2,00 |
+| Rodapé | `layout/site-footer.tsx` | Links para o Apoia.se, WhatsApp, GitHub e Discord |
+
+Os arquivos ficam em `src/components/`.
 
 ## Conteúdo da página
 
