@@ -10,11 +10,14 @@ A SouJunior é uma comunidade que ajuda profissionais em início de carreira com
 
 | Seção | Objetivo |
 |---|---|
-| Hero | Responder em poucos segundos por que apoiar a SouJunior, com o botão principal para o Apoia.se |
-| Causa | Mostrar como as doações mantêm a infraestrutura, as mentorias e os projetos open source |
-| Impacto | Apresentar os números da comunidade |
-| Planos | Explicar os níveis de apoio a partir de R$ 2,00 |
-| Rodapé | Links para o Apoia.se, Discord, WhatsApp e GitHub |
+| Tela inicial | Responder em poucos segundos por que apoiar a SouJunior, com o botão principal para o Apoia.se |
+| Nossa missão | Apresentar a SouJunior e as oportunidades que ela cria para novos talentos em tecnologia |
+| O que fazemos | Mostrar as iniciativas que transformam aprendizado em experiência prática |
+| Nosso impacto | Apresentar os números da comunidade |
+| Como o seu apoio ajuda | Mostrar como as doações mantêm as iniciativas funcionando |
+| Outras formas de ajudar | Mostrar como participar da comunidade além da doação |
+| Apoie! | Chamada final para apoiar a campanha no Apoia.se a partir de R$ 2,00 |
+| Rodapé | Links para o Apoia.se, WhatsApp, GitHub e Discord |
 
 ## Squad
 
