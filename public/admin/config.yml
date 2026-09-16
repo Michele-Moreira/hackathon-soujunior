@@ -4,6 +4,7 @@ backend:
   branch: main
   base_url: https://hackathon-soujunior.vercel.app
   auth_endpoint: api/auth
+  auth_scope: public_repo
   commit_messages:
     update: 'content(site): update {{collection}} from the cms'
 

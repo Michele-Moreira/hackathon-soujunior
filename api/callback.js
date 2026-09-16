@@ -16,12 +16,15 @@ function renderHandshake(status, payload) {
     <script>
       (function () {
         var message = 'authorization:github:${status}:' + ${JSON.stringify(JSON.stringify(payload))};
+        // Só o painel do próprio site recebe o token: outra origem que abrir esta janela fica sem resposta.
+        var siteOrigin = window.location.origin;
         function receive(event) {
-          window.opener.postMessage(message, event.origin);
+          if (event.origin !== siteOrigin) return;
+          window.opener.postMessage(message, siteOrigin);
           window.removeEventListener('message', receive, false);
         }
         window.addEventListener('message', receive, false);
-        window.opener.postMessage('authorizing:github', '*');
+        window.opener.postMessage('authorizing:github', siteOrigin);
       })();
     </script>
   </body>
