@@ -49,8 +49,6 @@ https://hackathon.soujunior.tech
 
 ## Como entregar uma tarefa
 
-Combinado com o Henrique: ninguém sobe direto na `main`.
-
 1. Avisar no grupo do WhatsApp o que começou, marcando @todos — a banca avalia a participação de cada um.
 2. Criar um branch só pra essa tarefa.
 3. Fazer os commits e abrir um pull request pro Henrique verificar e aceitar.
