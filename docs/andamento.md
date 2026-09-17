@@ -2,6 +2,9 @@
 
 Onde cada parte está. Quem mexer numa linha, atualiza o estado dela aqui junto com a entrega.
 
+**Quadro:** https://github.com/users/Michele-Moreira/projects/1 — cada linha daqui virou um cartão lá, com a
+pessoa marcada. Quem começar uma tarefa arrasta o cartão dela para a coluna certa.
+
 **Atualizado em:** 17/09/2026 · **Entrega:** 24/09/2026
 
 Estados: `A fazer` · `Em andamento` · `Aguardando verificação` · `Pronto`
