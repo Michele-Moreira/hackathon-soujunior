@@ -30,3 +30,7 @@ test-results/
 # Cache
 .vite/
 *.tsbuildinfo
+
+# Config pessoal do assistente (a do projeto fica versionada)
+.claude/settings.local.json
+.claude/tmp/
