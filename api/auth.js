@@ -17,7 +17,7 @@ export default function handler(request, response) {
   const params = new URLSearchParams({
     client_id: clientId,
     redirect_uri: `${protocol}://${host}/api/callback`,
-    scope: 'repo,user',
+    scope: 'public_repo,read:user',
     state,
   })
 
