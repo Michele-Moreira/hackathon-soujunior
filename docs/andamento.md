@@ -39,7 +39,7 @@ https://hackathon.soujunior.tech
 
 | Frente | Responsável | Estado | Observação |
 |---|---|---|---|
-| Painel de conteúdo em `/admin` (Decap CMS) | Michele | Aguardando verificação | `fix/cms-login` esperando o Henrique verificar e aceitar |
+| Painel de conteúdo em `/admin` (Decap CMS) | Michele | Pronto | No ar; o login pede só `public_repo,read:user` |
 | Paleta e tokens de cor da SouJunior | Michele | A fazer | Hoje ainda é a paleta cinza padrão do shadcn; cor e responsividade ficam no Tailwind, sem CSS solto |
 | Números da Impacto e da Financiamento | Márlon | Em andamento | Gasto mensal médio recorrente e quantidade de apoiadores (`apoiadores_soujunior.csv`); entrega os números tratados pro Cauã preencher o `site.json` |
 | Design final das seções | Ingrid | Em andamento | O front ajusta seção por seção quando chegar |
