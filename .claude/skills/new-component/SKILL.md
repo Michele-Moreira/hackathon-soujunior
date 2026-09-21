@@ -13,7 +13,7 @@ Sempre que for adicionar um componente — seja um avulso em `src/components/`, 
 
 ## Passos
 
-1. **Decida o local** (ver `docs/estrutura.md`):
+1. **Decida o local** (ver `docs/projeto.md`):
    - Componente isolado → `src/components/nome-componente.tsx`
    - Componente com subcomponentes/hooks próprios → pasta de feature `src/components/<feature>/`
 2. **Confirme o nome** com o usuário se houver ambiguidade. Arquivo em kebab-case, componente em PascalCase.

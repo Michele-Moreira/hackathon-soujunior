@@ -1,52 +1,22 @@
 # CLAUDE.md
 
-Instruções do projeto para o assistente. Estas regras valem para todo o repositório.
+**Comece sempre por aqui.** A base deste projeto está em `docs/projeto.md`, importado logo abaixo.
+Leia antes de responder ou editar qualquer coisa e use como referência em toda tarefa: o que é o
+projeto, stack, estrutura de pastas, convenções, quem faz o quê e fluxo de entrega saem de lá.
+Não deduza nada que esse arquivo já responde, e não contrarie o que ele diz.
 
-## Stack
+@docs/projeto.md
 
-- **Build:** Vite
-- **UI:** React + TypeScript
-- **Estilo:** Tailwind CSS + shadcn/ui
-- **Testes:** Vitest (unit) + Playwright (e2e)
-- **Idioma:** respostas e documentação em Português (Brasil)
+## Antes de mexer numa seção
 
-## Princípios
+Consulte o [quadro do projeto](https://github.com/users/Michele-Moreira/projects/1): ele diz o estado
+de cada frente e quem é o responsável. Pode ser trabalho de outra pessoa, e ninguém sobe direto na
+`main`.
 
-- Tom direto e prático, sem enrolação.
-- Código segue boas práticas e **não leva comentários** — o nome e a estrutura explicam.
-- Priorizar o ecossistema JS/TS já em uso; não introduzir dependência nova sem necessidade clara.
-- Antes de criar algo, procurar padrão existente no repo e seguir.
+## Convenções por tipo de arquivo
 
-## Convenções
+`.claude/rules/` carrega sozinho conforme o arquivo aberto. Não precisa ser lido à mão.
 
-As regras detalhadas vivem em `.claude/rules/`. As que têm `paths` no cabeçalho carregam só quando o arquivo casa com o padrão; as sem `paths` carregam sempre:
+---
 
-- `typescript.md` — tipagem, `strict`, sem `any`, imports type-only.
-- `react.md` — componentes de função, regras de hooks, props, onde mora o estado.
-- `styling.md` — Tailwind, `cn()`, tokens, uso de shadcn/ui.
-- `naming-conventions.md` — nomes de arquivos, componentes, hooks.
-- `conventional-commits.md` — formato de commit.
-
-## Estrutura de pastas
-
-Layout de `src/` documentado em `docs/estrutura.md`. Resumo:
-
-```
-src/
-├── components/ui/   # componentes shadcn
-├── components/      # componentes da aplicação
-├── hooks/           # hooks reutilizáveis (useX)
-├── lib/             # cn(), utils, clients
-├── pages/           # páginas / rotas
-├── types/           # tipos compartilhados
-├── content/        # textos da página em JSON (painel em /admin)
-└── styles/          # globals, tokens
-```
-
-## Fluxo de trabalho
-
-- **Commits:** skill `git-commit` (Conventional Commits, lowercase em inglês, escopo obrigatório, sem co-author/IA).
-- **Pull requests:** skill `create-pr` (título Conventional Commits, corpo Summary + Test plan em inglês, sem reviewers/draft/IA).
-- **Revisão:** use `/diff-review` antes de abrir PR; o subagent `code-reviewer` cobre correção + convenções.
-- **Testes:** o subagent `test-runner` roda Vitest/Playwright e reporta.
-- **Bugs:** o subagent `debugger` faz debugging sistemático antes de propor correção.
+<!-- Este arquivo é só a porta de entrada. Fato sobre o projeto vai em docs/projeto.md, não aqui. -->

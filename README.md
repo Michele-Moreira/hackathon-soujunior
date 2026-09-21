@@ -104,4 +104,5 @@ npm run dev
 
 ## Organização
 
-Convenções do projeto em `CLAUDE.md` e layout de `src/` em `docs/estrutura.md`.
+Base do projeto — stack, layout de `src/`, convenções e fluxo de entrega — em `docs/projeto.md`.
+Estado de cada frente no [quadro do projeto](https://github.com/users/Michele-Moreira/projects/1).
