@@ -22,4 +22,5 @@ Outras tarefas, equipes ou recursos que precisam ser concluídos ou disponíveis
 
 Espaço para observações, links, documentos ou informações complementares.
 
-<!-- Tópico que não se aplica pode ser apagado. O responsável não vai no texto: marque no campo "Assignees", ao lado. -->
+<!-- O título começa sempre com um verbo: "Criar o design final das seções", "Montar as caixas de número da seção Impacto".
+     Tópico que não se aplica pode ser apagado. O responsável não vai no texto: marque no campo "Assignees", ao lado. -->
