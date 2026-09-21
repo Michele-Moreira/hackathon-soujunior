@@ -9,8 +9,9 @@ Não deduza nada que esse arquivo já responde, e não contrarie o que ele diz.
 
 ## Antes de mexer numa seção
 
-Consulte `docs/andamento.md`: ele diz o estado de cada frente e quem é o responsável. Pode ser
-trabalho de outra pessoa, e ninguém sobe direto na `main`.
+Consulte o [quadro do projeto](https://github.com/users/Michele-Moreira/projects/1): ele diz o estado
+de cada frente e quem é o responsável. Pode ser trabalho de outra pessoa, e ninguém sobe direto na
+`main`.
 
 ## Convenções por tipo de arquivo
 

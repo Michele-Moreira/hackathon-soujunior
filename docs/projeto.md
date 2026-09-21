@@ -15,7 +15,8 @@ comunidade, mostra como as doações a sustentam e leva o visitante a apoiar a p
 
 ## Quem faz o quê
 
-Serve para não mexer no que é de outra pessoa. O estado de cada tarefa fica em `docs/andamento.md`.
+Serve para não mexer no que é de outra pessoa. O estado de cada tarefa fica no
+[quadro do projeto](https://github.com/users/Michele-Moreira/projects/1).
 
 | Pessoa | Frente |
 |---|---|
@@ -120,7 +121,7 @@ As regras detalhadas vivem em `.claude/rules/` e carregam sozinhas conforme o ar
 1. Avisar no grupo do WhatsApp o que começou, marcando @todos — a banca avalia a participação de cada um.
 2. Criar um branch só pra essa tarefa.
 3. Fazer os commits e abrir um pull request pro Henrique verificar e aceitar.
-4. Atualizar o estado da linha em `docs/andamento.md`.
+4. Mover o cartão da tarefa no [quadro do projeto](https://github.com/users/Michele-Moreira/projects/1).
 
 Ferramentas:
 
@@ -160,7 +161,5 @@ perderem; nenhuma foi corrigida ainda.
   `package.json` (só `dev`, `build`, `lint`, `preview`). As menções a Vitest/Playwright acima descrevem
   intenção, não realidade. O subagent `test-runner` e a skill `new-component` mandam rodar `npm run test`,
   `npm run type-check` e `npm run test:e2e`, que não existem. O teste real hoje é manual, em `docs/qa.md`.
-- **`docs/andamento.md` diverge em dois pontos:** lista `site-footer.tsx` como seção, mas o arquivo está em
-  `src/components/layout/`, não em `sections/`; e diz "18 casos" de QA quando `docs/qa.md` tem 30.
 - **A tabela de Stack do `README.md`** cita versões de React, TypeScript e Oxlint acima das declaradas no
   `package.json`.

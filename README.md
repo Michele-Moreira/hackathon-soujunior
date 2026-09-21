@@ -105,4 +105,4 @@ npm run dev
 ## Organização
 
 Base do projeto — stack, layout de `src/`, convenções e fluxo de entrega — em `docs/projeto.md`.
-Estado de cada frente em `docs/andamento.md`.
+Estado de cada frente no [quadro do projeto](https://github.com/users/Michele-Moreira/projects/1).
