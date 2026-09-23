@@ -35,7 +35,7 @@ export function SiteHeader() {
     <header
       onFocusCapture={show}
       className={cn(
-        'sticky top-0 z-20 bg-primary transition-transform duration-200 ease-out motion-reduce:transition-none',
+        'sticky top-0 z-20 bg-primary transition-transform duration-200 ease-out',
         isHeaderVisible ? 'translate-y-0' : '-translate-y-full',
       )}
     >

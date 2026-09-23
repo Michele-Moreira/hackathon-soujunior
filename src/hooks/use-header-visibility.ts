@@ -2,10 +2,20 @@ import { useCallback, useEffect, useState } from 'react'
 
 const TOP_THRESHOLD = 140
 const POINTER_ZONE = 80
+const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
 
 export function useHeaderVisibility(isPinned: boolean) {
   const [isVisible, setIsVisible] = useState(true)
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => window.matchMedia(REDUCED_MOTION).matches)
   const show = useCallback(() => setIsVisible(true), [])
+
+  useEffect(() => {
+    const query = window.matchMedia(REDUCED_MOTION)
+    const handleChange = () => setPrefersReducedMotion(query.matches)
+
+    query.addEventListener('change', handleChange)
+    return () => query.removeEventListener('change', handleChange)
+  }, [])
 
   useEffect(() => {
     let frame = 0
@@ -49,5 +59,5 @@ export function useHeaderVisibility(isPinned: boolean) {
     return () => window.removeEventListener('pointermove', handlePointerMove)
   }, [])
 
-  return { isHeaderVisible: isPinned || isVisible, show }
+  return { isHeaderVisible: isPinned || prefersReducedMotion || isVisible, show }
 }
