@@ -15,7 +15,7 @@ Conteúdo pronto para a seção de transparência da landing page, em formato de
 | **120** | Membros da comunidade |
 | **50+** | Pessoas empregadas através da SouJunior |
 | **3** | Projetos em desenvolvimento |
-| **Cerca de 40** | Apoiadores que voltam a apoiar todo mês |
+| **Cerca de 40** | Apoios mensais, em média |
 
 ---
 
