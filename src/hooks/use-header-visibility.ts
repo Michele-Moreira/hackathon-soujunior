@@ -49,6 +49,7 @@ export function useHeaderVisibility(isPinned: boolean) {
   }, [])
 
   useEffect(() => {
+    if (isVisible) return
     if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
 
     const handlePointerMove = (event: PointerEvent) => {
@@ -57,7 +58,7 @@ export function useHeaderVisibility(isPinned: boolean) {
 
     window.addEventListener('pointermove', handlePointerMove, { passive: true })
     return () => window.removeEventListener('pointermove', handlePointerMove)
-  }, [])
+  }, [isVisible])
 
   return { isHeaderVisible: isPinned || prefersReducedMotion || isVisible, show }
 }
