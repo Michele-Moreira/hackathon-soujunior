@@ -29,7 +29,7 @@ export function HeroSection() {
           </ExternalLink>
         </Button>
       </div>
-      <MascotImage name="inicio" isEager className="mx-auto lg:mx-0" />
+      <MascotImage name="inicio" isEager className="mx-auto lg:mx-0 lg:w-auto lg:max-h-[max(360px,calc(100svh-144px))]" />
     </PageSection>
   )
 }
