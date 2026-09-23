@@ -31,7 +31,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-20 bg-primary">
-      <div className="mx-auto flex h-[91px] w-full max-w-[1636px] items-center justify-between px-9 md:h-[140px] md:px-11">
+      <div className="mx-auto flex h-[91px] w-full max-w-[1636px] items-center justify-between px-9 md:h-[96px] md:px-11">
         <a href="#inicio" aria-label="SouJunior, voltar ao início" className="text-primary-foreground">
           <SouJuniorLogo className="h-[38px] md:h-[55px]" />
         </a>

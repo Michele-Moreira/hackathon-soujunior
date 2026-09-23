@@ -18,7 +18,7 @@ export function useActiveSection(sectionIds: readonly string[]): string {
           setActiveId(visible[0].target.id)
         }
       },
-      { rootMargin: '-140px 0px -55% 0px', threshold: 0 },
+      { rootMargin: '-96px 0px -55% 0px', threshold: 0 },
     )
 
     elements.forEach((element) => observer.observe(element))

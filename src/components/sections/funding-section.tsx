@@ -7,7 +7,7 @@ export function FundingSection() {
   const { eyebrow, title, description, cards, destinations } = content.funding
 
   return (
-    <section id="financiamento" aria-labelledby="financiamento-titulo" className="scroll-mt-[91px] md:scroll-mt-[140px]">
+    <section id="financiamento" aria-labelledby="financiamento-titulo" className="scroll-mt-[91px] md:scroll-mt-[96px]">
       <div className="px-9 py-16 md:px-11 md:py-24">
         <div className="mx-auto flex w-full max-w-[1636px] flex-col gap-10 md:grid md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-12">
           <div className="flex flex-col items-start gap-6 md:gap-8">
