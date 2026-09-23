@@ -12,7 +12,7 @@ export function ImpactSection() {
   return (
     <PageSection id="impacto" contentClassName="flex flex-col gap-12 md:gap-16">
       <div className="flex flex-col gap-10 xl:grid xl:grid-cols-2 xl:items-start xl:gap-12">
-        <Reveal className="order-2 flex flex-col gap-6 lg:pt-4">
+        <Reveal className="order-2 flex flex-col gap-6 xl:pt-4">
           <h2 id="impacto-titulo" className="text-[32px]/[40px] font-medium md:text-[48px]/[60px] xl:text-[64px]/[81px]">
             {title}
           </h2>
