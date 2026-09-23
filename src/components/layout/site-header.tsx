@@ -99,9 +99,9 @@ export function SiteHeader() {
         id="menu-mobile"
         inert={!isMenuOpen}
         data-open={isMenuOpen || undefined}
-        className="grid grid-rows-[0fr] overflow-hidden bg-primary transition-[grid-template-rows] [transition-duration:var(--duration-quick)] ease-out data-open:grid-rows-[1fr] motion-reduce:transition-none xl:hidden"
+        className="absolute inset-x-0 top-full grid max-h-[calc(100dvh-91px)] grid-rows-[0fr] overflow-hidden bg-primary transition-[grid-template-rows] [transition-duration:var(--duration-quick)] ease-out data-open:grid-rows-[1fr] motion-reduce:transition-none md:max-h-[calc(100dvh-96px)] xl:hidden"
       >
-        <div className="min-h-0 overflow-hidden">
+        <div className="min-h-0 overflow-y-auto overscroll-contain">
           <div className="border-t border-primary-foreground/20 px-9 pb-8">
             <nav aria-label="Seções da página, menu do celular">
               <ul className="flex flex-col">
