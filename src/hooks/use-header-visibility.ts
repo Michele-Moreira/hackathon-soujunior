@@ -1,14 +1,38 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 const TOP_THRESHOLD = 140
 const SCROLL_DELTA = 8
 const POINTER_ZONE = 80
+const SCROLL_SETTLE_MS = 150
+const NAVIGATION_TIMEOUT_MS = 2000
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
 
 export function useHeaderVisibility(isPinned: boolean) {
   const [isVisible, setIsVisible] = useState(true)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => window.matchMedia(REDUCED_MOTION).matches)
   const show = useCallback(() => setIsVisible(true), [])
+  const isNavigatingRef = useRef(false)
+  const settleTimerRef = useRef(0)
+  const timeoutTimerRef = useRef(0)
+
+  const finishNavigation = useCallback(() => {
+    window.clearTimeout(settleTimerRef.current)
+    window.clearTimeout(timeoutTimerRef.current)
+    isNavigatingRef.current = false
+  }, [])
+
+  const waitForScrollToSettle = useCallback(() => {
+    window.clearTimeout(settleTimerRef.current)
+    settleTimerRef.current = window.setTimeout(finishNavigation, SCROLL_SETTLE_MS)
+  }, [finishNavigation])
+
+  const startNavigation = useCallback(() => {
+    finishNavigation()
+    isNavigatingRef.current = true
+    setIsVisible(true)
+    waitForScrollToSettle()
+    timeoutTimerRef.current = window.setTimeout(finishNavigation, NAVIGATION_TIMEOUT_MS)
+  }, [finishNavigation, waitForScrollToSettle])
 
   useEffect(() => {
     const query = window.matchMedia(REDUCED_MOTION)
@@ -26,7 +50,7 @@ export function useHeaderVisibility(isPinned: boolean) {
       frame = 0
       const currentScrollY = window.scrollY
 
-      if (currentScrollY < TOP_THRESHOLD) {
+      if (isNavigatingRef.current || currentScrollY < TOP_THRESHOLD) {
         setIsVisible(true)
         previousScrollY = currentScrollY
         return
@@ -40,16 +64,20 @@ export function useHeaderVisibility(isPinned: boolean) {
     }
 
     const handleScroll = () => {
+      if (isNavigatingRef.current) waitForScrollToSettle()
       if (frame) return
       frame = requestAnimationFrame(update)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('scrollend', finishNavigation)
     return () => {
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scrollend', finishNavigation)
       if (frame) cancelAnimationFrame(frame)
+      finishNavigation()
     }
-  }, [])
+  }, [finishNavigation, waitForScrollToSettle])
 
   useEffect(() => {
     if (isVisible) return
@@ -63,5 +91,5 @@ export function useHeaderVisibility(isPinned: boolean) {
     return () => window.removeEventListener('pointermove', handlePointerMove)
   }, [isVisible])
 
-  return { isHeaderVisible: isPinned || prefersReducedMotion || isVisible, show }
+  return { isHeaderVisible: isPinned || prefersReducedMotion || isVisible, show, startNavigation }
 }

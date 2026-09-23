@@ -16,10 +16,13 @@ export function SiteHeader() {
   const { nav, supportLabel } = content.header
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const activeId = useActiveSection(SECTION_IDS)
-  const { isHeaderVisible, show } = useHeaderVisibility(isMenuOpen)
+  const { isHeaderVisible, show, startNavigation } = useHeaderVisibility(isMenuOpen)
 
   const handleToggleMenu = () => setIsMenuOpen((open) => !open)
-  const handleCloseMenu = () => setIsMenuOpen(false)
+  const handleMobileNavigate = () => {
+    startNavigation()
+    setIsMenuOpen(false)
+  }
 
   useEffect(() => {
     if (!isMenuOpen) return
@@ -63,6 +66,7 @@ export function SiteHeader() {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    onClick={startNavigation}
                     aria-current={isActive ? 'true' : undefined}
                     className={cn(
                       'border-b-2 pb-1 text-xl transition-colors',
@@ -109,7 +113,7 @@ export function SiteHeader() {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      onClick={handleCloseMenu}
+                      onClick={handleMobileNavigate}
                       className="block border-b border-primary-foreground/20 py-4 text-lg text-primary-foreground"
                     >
                       {link.label}
