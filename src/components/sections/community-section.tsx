@@ -11,7 +11,7 @@ export function CommunitySection() {
 
   return (
     <PageSection id="faca-parte" contentClassName="flex flex-col gap-10 md:gap-14">
-      <Reveal className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
+      <Reveal className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12">
         <div className="flex flex-col items-start gap-6 md:gap-8">
           <SectionChip>{eyebrow}</SectionChip>
           <h2 id="faca-parte-titulo" className="max-w-[640px] text-[32px]/[40px] font-medium md:text-[48px]/[60px] xl:text-[64px]/[81px]">
@@ -19,7 +19,7 @@ export function CommunitySection() {
           </h2>
           <p className="max-w-[640px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
         </div>
-        <MascotImage name="faca-parte" className="mx-auto lg:mx-0" />
+        <MascotImage name="faca-parte" className="mx-auto lg:mx-0 lg:w-[min(570px,80%)]" />
       </Reveal>
       <RevealGroup asChild>
         <ul className="grid gap-6 md:grid-cols-3 md:gap-8">

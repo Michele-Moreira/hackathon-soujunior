@@ -13,7 +13,8 @@ export function HeroSection() {
   return (
     <PageSection
       id="inicio"
-      contentClassName="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12"
+      className="pt-4 md:pt-4"
+      contentClassName="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12"
     >
       <div className="flex flex-col items-start gap-6 md:gap-8">
         <SectionChip>{eyebrow}</SectionChip>
@@ -28,7 +29,7 @@ export function HeroSection() {
           </ExternalLink>
         </Button>
       </div>
-      <MascotImage name="inicio" isEager className="mx-auto lg:mx-0" />
+      <MascotImage name="inicio" isEager className="mx-auto lg:mx-0 lg:w-auto lg:max-h-[max(360px,calc(100svh-144px))]" />
     </PageSection>
   )
 }
