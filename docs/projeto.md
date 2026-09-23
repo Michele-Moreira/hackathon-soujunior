@@ -116,12 +116,8 @@ As regras detalhadas vivem em `.claude/rules/` e carregam sozinhas conforme o ar
 
 ## Fluxo de trabalho
 
-**Ninguém sobe direto na `main`.** Combinado com o Henrique:
-
-1. Avisar no grupo do WhatsApp o que começou, marcando @todos — a banca avalia a participação de cada um.
-2. Criar um branch só pra essa tarefa.
-3. Fazer os commits e abrir um pull request contra a `main`. Ele entra com 1 aprovação de qualquer pessoa do time.
-4. Mover o cartão da tarefa no [quadro do projeto](https://github.com/users/Michele-Moreira/projects/1).
+**Ninguém sobe direto na `main`.** O passo a passo está em
+[Como contribuir](../README.md#como-contribuir), no README.
 
 Ferramentas:
 
