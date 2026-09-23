@@ -32,10 +32,12 @@ export function SiteFooter() {
             ))}
           </ul>
         </div>
-        <p className="mt-7 text-foreground/80">{tagline}</p>
-        <div className="mt-6 flex flex-col items-center gap-1 border-b border-foreground/15 pb-6 text-sm">
-          <p className="text-foreground/70">{campaign}</p>
-          <p className="text-foreground">{copyright}</p>
+        <div className="mt-7 flex flex-col gap-4 border-b border-foreground/15 pb-6 md:grid md:grid-cols-3 md:items-center md:gap-0">
+          <p className="text-foreground/80">{tagline}</p>
+          <div className="flex flex-col items-center gap-1 text-sm">
+            <p className="text-foreground/70">{campaign}</p>
+            <p className="text-foreground">{copyright}</p>
+          </div>
         </div>
       </div>
     </footer>
