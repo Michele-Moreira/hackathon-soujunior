@@ -33,9 +33,10 @@ export function SiteFooter() {
           </ul>
         </div>
         <p className="mt-7 text-foreground/80">{tagline}</p>
-        <p className="mt-4 border-b border-foreground/15 pb-6 text-sm text-foreground/70">
-          <span className="text-foreground">{copyright}</span> · {campaign}
-        </p>
+        <div className="mt-6 flex flex-col items-center gap-1 border-b border-foreground/15 pb-6 text-sm">
+          <p className="text-foreground/70">{campaign}</p>
+          <p className="text-foreground">{copyright}</p>
+        </div>
       </div>
     </footer>
   )
