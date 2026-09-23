@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
 const TOP_THRESHOLD = 140
+const SCROLL_DELTA = 8
 const POINTER_ZONE = 80
 const REDUCED_MOTION = '(prefers-reduced-motion: reduce)'
 
@@ -27,12 +28,14 @@ export function useHeaderVisibility(isPinned: boolean) {
 
       if (currentScrollY < TOP_THRESHOLD) {
         setIsVisible(true)
-      } else if (currentScrollY > previousScrollY) {
-        setIsVisible(false)
-      } else if (currentScrollY < previousScrollY) {
-        setIsVisible(true)
+        previousScrollY = currentScrollY
+        return
       }
 
+      const delta = currentScrollY - previousScrollY
+      if (Math.abs(delta) < SCROLL_DELTA) return
+
+      setIsVisible(delta < 0)
       previousScrollY = currentScrollY
     }
 
