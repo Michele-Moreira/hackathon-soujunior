@@ -143,4 +143,16 @@ collections:
             label: Rodapé
             widget: object
             fields:
+              - { name: tagline, label: Frase de assinatura, widget: string }
+              - name: links
+                label: Links do rodapé
+                widget: object
+                hint: 'Só o texto do link. Para onde cada um aponta é definido no código.'
+                fields:
+                  - { name: apoiase, label: Apoia.se, widget: string }
+                  - { name: discord, label: Discord, widget: string }
+                  - { name: whatsapp, label: WhatsApp, widget: string }
+                  - { name: github, label: GitHub, widget: string }
+                  - { name: site, label: Site institucional, widget: string }
               - { name: copyright, label: Direitos autorais, widget: string }
+              - { name: campaign, label: Linha da campanha, widget: string }

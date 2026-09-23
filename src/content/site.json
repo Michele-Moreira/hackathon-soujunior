@@ -83,7 +83,7 @@
         "href": "#faca-parte"
       }
     ],
-    "supportLabel": "Apoie"
+    "supportLabel": "Apoie a SouJunior"
   },
   "support": {
     "eyebrow": "Apoie",
@@ -98,7 +98,16 @@
     "supportLabel": "Apoie a partir de R$ 2,00"
   },
   "footer": {
-    "copyright": "© 2026 SouJunior"
+    "tagline": "O júnior de hoje é o sênior de amanhã.",
+    "links": {
+      "apoiase": "Apoia.se",
+      "discord": "Discord",
+      "whatsapp": "WhatsApp",
+      "github": "GitHub",
+      "site": "Site institucional"
+    },
+    "copyright": "© 2026 SouJunior",
+    "campaign": "Campanha oficial via Apoia.se"
   },
   "whatWeDo": {
     "eyebrow": "Atuação",

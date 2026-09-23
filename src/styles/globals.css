@@ -31,6 +31,7 @@
     --color-cta: var(--cta);
     --color-cta-foreground: var(--cta-foreground);
     --color-band: var(--band);
+    --color-surface-deep: var(--surface-deep);
     --color-card-muted: var(--card-muted);
     --color-accent-strong: var(--accent-strong);
     --color-ink: var(--ink);
@@ -73,6 +74,7 @@
     --cta: oklch(0 0 0);
     --cta-foreground: oklch(1 0 0);
     --band: oklch(0.297 0.158 267.1);
+    --surface-deep: oklch(0.196 0.093 268.5);
     --card-muted: oklch(0.869 0.017 278.5);
     --accent-strong: oklch(0.378 0.242 265.9);
     --ink: oklch(0.274 0.019 272.0);
