@@ -93,7 +93,7 @@ export function SiteHeader() {
           aria-controls="menu-mobile"
           aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           onClick={handleToggleMenu}
-          className="rounded-md p-2 text-primary-foreground outline-none focus-visible:ring-[3px] focus-visible:ring-primary-foreground/50 xl:hidden"
+          className="rounded-md p-2 text-primary-foreground xl:hidden"
         >
           {isMenuOpen ? <X className="size-8" /> : <Menu className="size-8" />}
         </button>

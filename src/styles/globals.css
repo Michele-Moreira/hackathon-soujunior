@@ -86,7 +86,7 @@
     --destructive: oklch(0.577 0.245 27.325);
     --border: oklch(1 0 0 / 14%);
     --input: oklch(1 0 0 / 14%);
-    --ring: oklch(0.617 0.196 261.4);
+    --ring: oklch(1 0 0);
     --chart-1: oklch(0.87 0 0);
     --chart-2: oklch(0.556 0 0);
     --chart-3: oklch(0.439 0 0);
@@ -141,7 +141,10 @@
     @apply scroll-pt-[91px] scroll-smooth motion-reduce:scroll-auto md:scroll-pt-[96px];
     }
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring;
+    }
+  :focus-visible {
+    @apply outline-2 outline-offset-2;
     }
   body {
     @apply bg-background font-sans text-foreground;
