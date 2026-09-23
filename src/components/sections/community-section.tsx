@@ -9,7 +9,7 @@ export function CommunitySection() {
 
   return (
     <PageSection id="faca-parte" contentClassName="flex flex-col gap-10 md:gap-14">
-      <div className="flex flex-col gap-8 md:grid md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-12">
+      <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-12">
         <div className="flex flex-col items-start gap-6 md:gap-8">
           <SectionChip>{eyebrow}</SectionChip>
           <h2 id="faca-parte-titulo" className="max-w-[640px] text-[32px]/[40px] font-medium md:text-[64px]/[81px]">
@@ -17,7 +17,7 @@ export function CommunitySection() {
           </h2>
           <p className="max-w-[640px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
         </div>
-        <MascotImage name="faca-parte" className="mx-auto md:mx-0" />
+        <MascotImage name="faca-parte" className="mx-auto lg:mx-0" />
       </div>
       <ul className="grid gap-6 md:grid-cols-3 md:gap-8">
         {personas.map((persona) => (
