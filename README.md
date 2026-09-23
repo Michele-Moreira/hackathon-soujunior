@@ -119,10 +119,14 @@ O cabeçalho desktop é 96px e não os 141px do Figma: com um logo de 55px a bar
 tela. Redução combinada com a Michele, que confirmou com a Ingrid. No celular a arte mostra 141px
 contando os 50px da barra de status do iOS, que é do mock-up e não da página — a barra em si tem 91px.
 
-As seções de duas colunas só se dividem a partir de 1024px. Abaixo disso empilham, porque a coluna
-do mascote pede a largura natural da imagem e estouraria a tela em 768px.
+As seções de duas colunas empilham até sobrar largura para as duas. A coluna do mascote pede a
+largura natural da imagem, então dividir cedo aperta o texto ao lado: em Impacto o topo só vira
+duas colunas em 1280px, e a faixa "Rede de apoio" só põe o rótulo ao lado dos cards em 1536px,
+senão a legenda vaza da caixa.
 
-No celular o cabeçalho vira logo + menu sanduíche.
+O cabeçalho é logo + menu sanduíche até 1536px. A barra inteira do Figma mede 1482px (logo 352px,
+navegação 802px, botão 328px); mesmo com o logo em 290px a linha pede cerca de 1420px, então em
+1280px ela ainda não cabe.
 
 ## Squad
 
