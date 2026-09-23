@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from '@/components/layout/external-link'
@@ -7,6 +7,7 @@ import content from '@/content/site.json'
 import { useActiveSection } from '@/hooks/use-active-section'
 import { useHeaderVisibility } from '@/hooks/use-header-visibility'
 import { APOIA_SE_URL } from '@/lib/links'
+import { scrollToSection } from '@/lib/scroll-to-section'
 import { cn } from '@/lib/utils'
 
 const SECTION_IDS = content.header.nav.map((link) => link.href.slice(1))
@@ -15,13 +16,18 @@ const DESKTOP_NAV = '(min-width: 80rem)'
 export function SiteHeader() {
   const { nav, supportLabel } = content.header
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
   const activeId = useActiveSection(SECTION_IDS)
   const { isHeaderVisible, show, startNavigation } = useHeaderVisibility(isMenuOpen)
 
   const handleToggleMenu = () => setIsMenuOpen((open) => !open)
-  const handleMobileNavigate = () => {
+  const handleNavigate = (event: MouseEvent<HTMLAnchorElement>) => {
     startNavigation()
     setIsMenuOpen(false)
+
+    const id = event.currentTarget.hash.slice(1)
+    const headerHeight = headerRef.current?.offsetHeight ?? 0
+    if (scrollToSection(id, headerHeight)) event.preventDefault()
   }
 
   useEffect(() => {
@@ -47,6 +53,7 @@ export function SiteHeader() {
 
   return (
     <header
+      ref={headerRef}
       onFocusCapture={show}
       className={cn(
         'sticky top-0 z-20 bg-primary transition-transform [transition-duration:var(--duration-quick)] ease-out',
@@ -66,7 +73,7 @@ export function SiteHeader() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={startNavigation}
+                    onClick={handleNavigate}
                     aria-current={isActive ? 'true' : undefined}
                     className={cn(
                       'border-b-2 pb-1 text-xl transition-colors',
@@ -113,7 +120,7 @@ export function SiteHeader() {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      onClick={handleMobileNavigate}
+                      onClick={handleNavigate}
                       className="block border-b border-primary-foreground/20 py-4 text-lg text-primary-foreground"
                     >
                       {link.label}
