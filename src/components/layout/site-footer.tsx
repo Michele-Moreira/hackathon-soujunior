@@ -15,7 +15,7 @@ export function SiteFooter() {
   const { tagline, links, copyright, campaign } = content.footer
 
   return (
-    <footer className="bg-surface-deep px-9 py-10 md:px-11">
+    <footer className="bg-surface-deep px-9 pt-10 pb-6 md:px-11">
       <div className="mx-auto w-full max-w-[1636px]">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <SouJuniorLogo className="h-[30px] text-foreground md:h-[34px]" />
@@ -33,10 +33,9 @@ export function SiteFooter() {
           </ul>
         </div>
         <p className="mt-7 text-foreground/80">{tagline}</p>
-        <div className="mt-6 flex flex-col items-center gap-1 border-t border-foreground/15 pt-4 text-sm">
-          <p className="text-foreground">{copyright}</p>
-          <p className="text-foreground/70">{campaign}</p>
-        </div>
+        <p className="mt-4 border-b border-foreground/15 pb-6 text-sm text-foreground/70">
+          <span className="text-foreground">{copyright}</span> · {campaign}
+        </p>
       </div>
     </footer>
   )
