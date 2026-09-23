@@ -11,32 +11,27 @@ export function ImpactSection() {
 
   return (
     <PageSection id="impacto" contentClassName="flex flex-col gap-12 md:gap-16">
-      <div className="flex flex-col gap-10 xl:grid xl:grid-cols-2 xl:items-start xl:gap-12">
-        <Reveal className="order-2 flex flex-col gap-6 xl:pt-4">
-          <h2 id="impacto-titulo" className="text-[32px]/[40px] font-medium md:text-[48px]/[60px] xl:text-[64px]/[81px]">
+      <div className="flex flex-col gap-8 xl:grid xl:grid-cols-[436px_minmax(0,1fr)_minmax(0,1fr)] xl:grid-rows-[auto_1fr] xl:gap-x-8 xl:gap-y-6 2xl:gap-x-12">
+        <Reveal className="xl:col-start-1 xl:row-start-1">
+          <SectionChip>{eyebrow}</SectionChip>
+        </Reveal>
+        <Reveal className="flex flex-col gap-6 xl:col-start-3 xl:row-span-2 xl:row-start-1 xl:self-center">
+          <h2 id="impacto-titulo" className="text-[32px]/[40px] font-medium md:text-[48px]/[60px] 2xl:text-[64px]/[81px]">
             {title}
           </h2>
           <p className="max-w-[760px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
         </Reveal>
-        <div className="order-1 flex flex-col gap-8">
-          <Reveal className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-            <div className="flex flex-col items-start gap-6">
-              <SectionChip>{eyebrow}</SectionChip>
-              <h3 className="text-2xl font-semibold md:text-[32px]">{communityTitle}</h3>
-            </div>
-            <MascotImage name="impacto" className="mx-auto w-[220px] sm:mx-0 sm:w-[240px] xl:w-[280px]" />
+        <Reveal className="xl:col-start-2 xl:row-span-2 xl:row-start-1 xl:self-center">
+          <MascotImage name="impacto" className="mx-auto w-[240px] md:w-[320px] xl:w-full xl:max-w-[519px]" />
+        </Reveal>
+        <div className="flex flex-col gap-6 xl:col-start-1 xl:row-start-2">
+          <Reveal asChild>
+            <h3 className="text-2xl font-bold md:text-[32px] xl:text-[40px]/[48px]">{communityTitle}</h3>
           </Reveal>
           <RevealGroup asChild>
-            <dl className="grid gap-4 sm:grid-cols-3 md:gap-5">
+            <dl className="grid auto-rows-fr grid-cols-2 gap-4">
               {communityStats.map((stat) => (
-                <StatCard
-                  key={stat.label}
-                  data-reveal
-                  value={stat.value}
-                  label={stat.label}
-                  layout="stacked"
-                  className="h-full"
-                />
+                <StatCard key={stat.label} data-reveal value={stat.value} label={stat.label} layout="stacked" />
               ))}
             </dl>
           </RevealGroup>
@@ -45,10 +40,10 @@ export function ImpactSection() {
 
       <div className="flex flex-col gap-6 2xl:grid 2xl:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] 2xl:items-center 2xl:gap-12">
         <Reveal asChild>
-          <h3 className="text-2xl font-semibold md:text-[32px]">{networkTitle}</h3>
+          <h3 className="text-2xl font-bold md:text-[32px] xl:text-[40px]/[48px]">{networkTitle}</h3>
         </Reveal>
         <RevealGroup asChild>
-          <dl className="grid gap-4 md:grid-cols-2 md:gap-6">
+          <dl className="grid gap-4 md:gap-6 lg:grid-cols-2">
             {networkStats.map((stat) => (
               <StatCard key={stat.label} data-reveal value={stat.value} label={stat.label} className="h-full" />
             ))}
