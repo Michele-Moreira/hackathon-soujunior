@@ -16,10 +16,13 @@ export function SiteHeader() {
   const { nav, supportLabel } = content.header
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const activeId = useActiveSection(SECTION_IDS)
-  const { isHeaderVisible, show } = useHeaderVisibility(isMenuOpen)
+  const { isHeaderVisible, show, startNavigation } = useHeaderVisibility(isMenuOpen)
 
   const handleToggleMenu = () => setIsMenuOpen((open) => !open)
-  const handleCloseMenu = () => setIsMenuOpen(false)
+  const handleMobileNavigate = () => {
+    startNavigation()
+    setIsMenuOpen(false)
+  }
 
   useEffect(() => {
     if (!isMenuOpen) return
@@ -63,6 +66,7 @@ export function SiteHeader() {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    onClick={startNavigation}
                     aria-current={isActive ? 'true' : undefined}
                     className={cn(
                       'border-b-2 pb-1 text-xl transition-colors',
@@ -99,27 +103,29 @@ export function SiteHeader() {
         id="menu-mobile"
         inert={!isMenuOpen}
         data-open={isMenuOpen || undefined}
-        className="grid grid-rows-[0fr] overflow-hidden bg-primary transition-[grid-template-rows] [transition-duration:var(--duration-quick)] ease-out data-open:grid-rows-[1fr] motion-reduce:transition-none xl:hidden"
+        className="absolute inset-x-0 top-full grid max-h-[calc(100dvh-91px)] grid-rows-[0fr] overflow-hidden bg-primary transition-[grid-template-rows] [transition-duration:var(--duration-quick)] ease-out data-open:grid-rows-[1fr] motion-reduce:transition-none md:max-h-[calc(100dvh-96px)] xl:hidden"
       >
-        <div className="overflow-hidden border-t border-primary-foreground/20 px-9 pb-8">
-          <nav aria-label="Seções da página, menu do celular">
-            <ul className="flex flex-col">
-              {nav.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={handleCloseMenu}
-                    className="block border-b border-primary-foreground/20 py-4 text-lg text-primary-foreground"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <Button asChild variant="cta" className="mt-6 h-[52px] w-full text-base">
-            <ExternalLink href={APOIA_SE_URL}>{supportLabel}</ExternalLink>
-          </Button>
+        <div className="min-h-0 overflow-y-auto overscroll-contain">
+          <div className="border-t border-primary-foreground/20 px-9 pb-8">
+            <nav aria-label="Seções da página, menu do celular">
+              <ul className="flex flex-col">
+                {nav.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      onClick={handleMobileNavigate}
+                      className="block border-b border-primary-foreground/20 py-4 text-lg text-primary-foreground"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <Button asChild variant="cta" className="mt-6 h-[52px] w-full text-base">
+              <ExternalLink href={APOIA_SE_URL}>{supportLabel}</ExternalLink>
+            </Button>
+          </div>
         </div>
       </div>
     </header>
