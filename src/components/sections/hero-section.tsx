@@ -13,11 +13,11 @@ export function HeroSection() {
   return (
     <PageSection
       id="inicio"
-      contentClassName="flex flex-col gap-10 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-12"
+      contentClassName="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12"
     >
       <div className="flex flex-col items-start gap-6 md:gap-8">
         <SectionChip>{eyebrow}</SectionChip>
-        <h1 id="inicio-titulo" className="max-w-[760px] text-[40px]/[50px] font-medium md:text-[72px]/[88px]">
+        <h1 id="inicio-titulo" className="max-w-[760px] text-[40px]/[50px] font-medium md:text-[52px]/[64px] xl:text-[72px]/[88px]">
           {title}
         </h1>
         <p className="max-w-[560px] text-base/[22px] text-foreground/75 md:text-2xl/[35px]">{description}</p>

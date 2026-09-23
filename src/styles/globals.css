@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
     --font-display: "Funnel Display", ui-sans-serif, system-ui, sans-serif;
     --font-sans: "Funnel Sans", ui-sans-serif, system-ui, sans-serif;
     --radius-sm: calc(var(--radius) * 0.6);
@@ -57,6 +58,9 @@
 
 :root {
     --radius: 0.625rem;
+    --duration-quick: 200ms;
+    --duration-base: 300ms;
+    --duration-slow: 400ms;
     --background: oklch(0.259 0.132 267.4);
     --foreground: oklch(0.931 0.003 264.5);
     --card: oklch(0.320 0.128 267.4);
@@ -134,7 +138,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth motion-reduce:scroll-auto;
+    @apply scroll-pt-[91px] scroll-smooth motion-reduce:scroll-auto md:scroll-pt-[96px];
     }
   * {
     @apply border-border outline-ring/50;
@@ -144,5 +148,40 @@
     }
   h1, h2, h3 {
     @apply font-display;
+    }
+}
+
+@layer base {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity var(--duration-base) var(--ease-out),
+      transform var(--duration-base) var(--ease-out);
+    }
+  [data-reveal][data-visible],
+  [data-reveal-group][data-visible] > [data-reveal] {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  [data-reveal-group] > [data-reveal]:nth-child(2) {
+    transition-delay: 60ms;
+    }
+  [data-reveal-group] > [data-reveal]:nth-child(3) {
+    transition-delay: 120ms;
+    }
+  [data-reveal-group] > [data-reveal]:nth-child(4) {
+    transition-delay: 180ms;
+    }
+  [data-reveal-group] > [data-reveal]:nth-child(n + 5) {
+    transition-delay: 240ms;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transform: none;
+    transition-duration: 150ms;
+    transition-delay: 0ms !important;
     }
 }

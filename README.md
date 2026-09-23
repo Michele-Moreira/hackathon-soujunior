@@ -119,10 +119,27 @@ O cabeçalho desktop é 96px e não os 141px do Figma: com um logo de 55px a bar
 tela. Redução combinada com a Michele, que confirmou com a Ingrid. No celular a arte mostra 141px
 contando os 50px da barra de status do iOS, que é do mock-up e não da página — a barra em si tem 91px.
 
-As seções de duas colunas só se dividem a partir de 1024px. Abaixo disso empilham, porque a coluna
-do mascote pede a largura natural da imagem e estouraria a tela em 768px.
+Cada seção de duas colunas só se divide quando o conteúdo mais largo dela cabe na coluna. A regra
+é o conteúdo, não um breakpoint único: dividir cedo aperta o texto ao lado, e a palavra mais longa
+passa a invadir o espaçamento do card. Onde cada uma vira:
 
-No celular o cabeçalho vira logo + menu sanduíche.
+| Seção | Divide em | O que define |
+|---|---|---|
+| Início, Missão, Atuação, Faça parte | 1024px | cabem; a coluna do mascote é fração, não largura natural da imagem |
+| Financiamento (topo) | 1024px | cabe |
+| Financiamento (cards da faixa) | 1280px | 4 colunas em 1024px deixam 106px para o título, e "Infraestrutura" mede 123px |
+| Impacto (topo) | 1280px | em 1024px o card de comunidade fica com 94px de conteúdo |
+| Apoie | 1280px | os tiers são sempre 2 por linha; em 1024px o card teria 134px e "R$10" mede 149px |
+| Impacto ("Rede de apoio") | 1536px | abaixo disso o rótulo em cima, senão a legenda vaza da caixa |
+
+As larguras de texto acima são medidas com as métricas das fontes Funnel Sans e Funnel Display,
+não estimadas.
+
+O cabeçalho é logo + menu sanduíche até 1280px, e mostra a navegação inteira a partir dali. O que
+mandamos para a tela pede 1147px: logo 290px, navegação 630px (os seis rótulos em 20px mais os
+cinco vãos de 28px) e botão 227px. Em 1280px sobram 1192px de largura útil, ou seja 22px de
+respiro em cada vão; em 1366px já são 65px. Não confundir com os 1482px que a barra mede no Figma
+— lá o logo tem 352px e a navegação 802px.
 
 ## Squad
 
