@@ -5,6 +5,7 @@ import { ExternalLink } from '@/components/layout/external-link'
 import { SouJuniorLogo } from '@/components/layout/soujunior-logo'
 import content from '@/content/site.json'
 import { useActiveSection } from '@/hooks/use-active-section'
+import { useHeaderVisibility } from '@/hooks/use-header-visibility'
 import { APOIA_SE_URL } from '@/lib/links'
 import { cn } from '@/lib/utils'
 
@@ -14,6 +15,7 @@ export function SiteHeader() {
   const { nav, supportLabel } = content.header
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const activeId = useActiveSection(SECTION_IDS)
+  const { isHeaderVisible, show } = useHeaderVisibility(isMenuOpen)
 
   const handleToggleMenu = () => setIsMenuOpen((open) => !open)
   const handleCloseMenu = () => setIsMenuOpen(false)
@@ -30,7 +32,13 @@ export function SiteHeader() {
   }, [isMenuOpen])
 
   return (
-    <header className="sticky top-0 z-20 bg-primary">
+    <header
+      onFocusCapture={show}
+      className={cn(
+        'sticky top-0 z-20 bg-primary transition-transform duration-200 ease-out motion-reduce:transition-none',
+        isHeaderVisible ? 'translate-y-0' : '-translate-y-full',
+      )}
+    >
       <div className="mx-auto flex h-[91px] w-full max-w-[1636px] items-center justify-between px-9 md:h-[96px] md:px-11">
         <a href="#inicio" aria-label="SouJunior, voltar ao início" className="text-primary-foreground">
           <SouJuniorLogo className="h-[38px] md:h-[55px]" />
