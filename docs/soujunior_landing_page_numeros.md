@@ -8,14 +8,23 @@ Conteúdo pronto para a seção de transparência da landing page, em formato de
 
 > O Junior de hoje é o Sênior do amanhã.
 
+**A comunidade hoje**
+
 | | |
 |---|---|
-| **140** | Apoiadores desde o início |
-| **35** | Mentores ativos |
-| **120** | Membros da comunidade |
-| **50+** | Pessoas empregadas através da SouJunior |
-| **3** | Projetos em desenvolvimento |
-| **Cerca de 40** | Apoios mensais, em média |
+| **120** | pessoas conectadas |
+| **35** | mentores voluntários |
+| **+50** | pessoas inseridas no mercado de TI |
+| **540** | juniores impactados pela SouJunior |
+
+**Rede de apoio (apoia.se)**
+
+| | |
+|---|---|
+| **140** | pessoas já apoiaram a SouJunior desde o início |
+| **40** | apoios mensais, em média |
+
+> **Fora da página:** a SouJunior tem **3** projetos em desenvolvimento. O número é oficial, mas saiu do design final, então fica registrado só aqui.
 
 ---
 
