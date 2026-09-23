@@ -34,3 +34,6 @@ test-results/
 # Config pessoal do assistente (a do projeto fica versionada)
 .claude/settings.local.json
 .claude/tmp/
+
+# Export do Figma, referência local e descartável
+docs/design-figma/
