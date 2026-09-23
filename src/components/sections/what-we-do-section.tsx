@@ -13,7 +13,7 @@ export function WhatWeDoSection() {
       <Reveal>
         <SectionChip>{eyebrow}</SectionChip>
       </Reveal>
-      <div className="flex flex-col gap-10 lg:grid md:grid-cols-2 lg:gap-20">
+      <div className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-20">
         <Reveal className="flex flex-col gap-6">
           <h2 id="atuacao-titulo" className="text-[32px]/[40px] font-medium md:text-[64px]/[81px]">
             {title}
