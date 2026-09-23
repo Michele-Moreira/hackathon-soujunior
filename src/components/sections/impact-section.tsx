@@ -11,14 +11,14 @@ export function ImpactSection() {
 
   return (
     <PageSection id="impacto" contentClassName="flex flex-col gap-12 md:gap-16">
-      <div className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:items-start lg:gap-12">
+      <div className="flex flex-col gap-10 xl:grid xl:grid-cols-2 xl:items-start xl:gap-12">
         <div className="flex flex-col gap-8">
           <Reveal className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
             <div className="flex flex-col items-start gap-6">
               <SectionChip>{eyebrow}</SectionChip>
               <h3 className="text-2xl font-semibold md:text-[32px]">{communityTitle}</h3>
             </div>
-            <MascotImage name="impacto" className="mx-auto w-[220px] sm:mx-0 sm:w-[240px] lg:w-[280px]" />
+            <MascotImage name="impacto" className="mx-auto w-[220px] sm:mx-0 sm:w-[240px] xl:w-[280px]" />
           </Reveal>
           <RevealGroup asChild>
             <dl className="grid gap-4 sm:grid-cols-3 md:gap-5">
@@ -38,7 +38,7 @@ export function ImpactSection() {
         </Reveal>
       </div>
 
-      <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:items-center lg:gap-12">
+      <div className="flex flex-col gap-6 2xl:grid 2xl:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] 2xl:items-center 2xl:gap-12">
         <Reveal asChild>
           <h3 className="text-2xl font-semibold md:text-[32px]">{networkTitle}</h3>
         </Reveal>
