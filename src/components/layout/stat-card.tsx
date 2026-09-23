@@ -14,24 +14,17 @@ export function StatCard({ value, label, layout = 'inline', className, ...props 
     <div
       {...props}
       className={cn(
-        'flex rounded-2xl bg-foreground',
+        'flex rounded-lg bg-foreground shadow-[0_4px_4px] shadow-black/25',
         isStacked
-          ? 'flex-col items-center gap-2 px-5 py-9 text-center md:py-12'
-          : 'items-center gap-5 px-6 py-6 md:px-8',
+          ? 'flex-col items-center justify-center gap-2 p-4 text-center'
+          : 'items-center gap-5 px-6 py-6 md:px-8 xl:min-h-42',
         className,
       )}
     >
-      <dt className={cn('text-ink', isStacked ? 'text-sm/[20px] md:text-base/[24px]' : 'md:text-lg/[26px]')}>
+      <dt className={cn('text-ink', isStacked ? 'text-sm/5 md:text-lg/6' : 'md:text-lg/[26px] xl:text-2xl')}>
         {label}
       </dt>
-      <dd
-        className={cn(
-          'order-first font-bold text-accent-strong',
-          isStacked ? 'text-[36px]/none md:text-[44px]/none' : 'text-[40px]/none md:text-[52px]/none',
-        )}
-      >
-        {value}
-      </dd>
+      <dd className="order-first text-[40px]/none font-bold text-accent-strong md:text-[55px]/none">{value}</dd>
     </div>
   )
 }

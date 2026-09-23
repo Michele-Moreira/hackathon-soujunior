@@ -23,7 +23,7 @@ export function MissionSection() {
           <RevealGroup asChild>
             <ul className="grid gap-6 md:grid-cols-2 md:gap-10">
               {cards.map((card) => (
-                <li key={card.title} data-reveal className="flex flex-col gap-5 rounded-2xl bg-foreground p-7 md:p-9">
+                <li key={card.title} data-reveal className="flex flex-col gap-5 rounded-lg bg-foreground p-7 md:p-9">
                   <h3 className="border-b-2 border-accent-strong pb-4 text-2xl font-semibold text-accent-strong md:text-[28px]">
                     {card.title}
                   </h3>
