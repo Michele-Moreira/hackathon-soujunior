@@ -43,7 +43,7 @@ export function WhatWeDoSection() {
       <RevealGroup asChild>
         <ul className="grid gap-6 md:grid-cols-2 md:gap-10">
           {programs.map((program) => (
-            <li key={program.title} data-reveal className="flex flex-col gap-4 rounded-2xl bg-card-muted p-7 md:p-10">
+            <li key={program.title} data-reveal className="flex flex-col gap-4 rounded-lg bg-foreground p-7 md:p-10">
               <h3 className="text-2xl font-semibold text-accent-strong md:text-[32px]">{program.title}</h3>
               <p className="text-ink md:text-lg/[28px]">{program.description}</p>
             </li>

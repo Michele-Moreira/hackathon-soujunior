@@ -24,8 +24,8 @@ export function CommunitySection() {
       <RevealGroup asChild>
         <ul className="grid gap-6 md:grid-cols-3 md:gap-8">
           {personas.map((persona) => (
-            <li key={persona.title} data-reveal className="flex flex-col rounded-2xl bg-primary-foreground">
-              <span className="flex items-center border-b border-ink/10 px-7 py-6 text-primary">
+            <li key={persona.title} data-reveal className="flex flex-col rounded-lg bg-foreground">
+              <span className="flex items-center border-b border-ink/10 px-7 py-6 text-accent-strong">
                 <ContentIcon name={persona.icon} className="size-7" />
               </span>
               <div className="flex flex-col gap-3 px-7 py-6">

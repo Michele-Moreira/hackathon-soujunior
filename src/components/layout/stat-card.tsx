@@ -14,7 +14,7 @@ export function StatCard({ value, label, layout = 'inline', className, ...props 
     <div
       {...props}
       className={cn(
-        'flex rounded-2xl bg-foreground',
+        'flex rounded-lg bg-foreground',
         isStacked
           ? 'flex-col items-center gap-2 px-5 py-9 text-center md:py-12'
           : 'items-center gap-5 px-6 py-6 md:px-8',

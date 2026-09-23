@@ -35,7 +35,7 @@ export function SupportSection() {
             <li
               key={tier.value}
               data-reveal
-              className="flex flex-col items-center gap-2 rounded-2xl bg-foreground px-5 py-8 text-center md:gap-3 md:px-8 md:py-12"
+              className="flex flex-col items-center gap-2 rounded-lg bg-foreground px-5 py-8 text-center md:gap-3 md:px-8 md:py-12"
             >
               <p className="text-[40px]/none font-bold text-accent-strong md:text-[64px]/none">{tier.value}</p>
               <h3 className="font-semibold text-accent-strong md:text-xl">{tier.title}</h3>
