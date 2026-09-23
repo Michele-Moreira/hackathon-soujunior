@@ -18,7 +18,7 @@ export function SupportSection() {
     >
       <Reveal className="flex flex-col items-start gap-6 md:gap-8">
         <SectionChip>{eyebrow}</SectionChip>
-        <h2 id="apoie-titulo" className="text-[32px]/[40px] font-medium md:text-[64px]/[81px]">
+        <h2 id="apoie-titulo" className="text-[32px]/[40px] font-medium md:text-[48px]/[60px] xl:text-[64px]/[81px]">
           {title}
         </h2>
         <p className="max-w-[720px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>

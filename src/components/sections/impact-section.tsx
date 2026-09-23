@@ -31,14 +31,14 @@ export function ImpactSection() {
           </RevealGroup>
         </div>
         <Reveal className="flex flex-col gap-6 lg:pt-4">
-          <h2 id="impacto-titulo" className="text-[32px]/[40px] font-medium md:text-[64px]/[81px]">
+          <h2 id="impacto-titulo" className="text-[32px]/[40px] font-medium md:text-[48px]/[60px] xl:text-[64px]/[81px]">
             {title}
           </h2>
           <p className="max-w-[760px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
         </Reveal>
       </div>
 
-      <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[minmax(0,auto)_minmax(0,1fr)] lg:items-center lg:gap-12">
+      <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:items-center lg:gap-12">
         <Reveal asChild>
           <h3 className="text-2xl font-semibold md:text-[32px]">{networkTitle}</h3>
         </Reveal>

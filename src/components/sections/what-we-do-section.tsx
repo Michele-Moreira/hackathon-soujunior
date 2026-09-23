@@ -15,7 +15,7 @@ export function WhatWeDoSection() {
       </Reveal>
       <div className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-20">
         <Reveal className="flex flex-col gap-6">
-          <h2 id="atuacao-titulo" className="text-[32px]/[40px] font-medium md:text-[64px]/[81px]">
+          <h2 id="atuacao-titulo" className="text-[32px]/[40px] font-medium md:text-[48px]/[60px] xl:text-[64px]/[81px]">
             {title}
           </h2>
           <p className="max-w-[620px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
