@@ -14,7 +14,7 @@ export function SupportSection() {
   return (
     <PageSection
       id="apoie"
-      contentClassName="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:items-center lg:gap-20"
+      contentClassName="flex flex-col gap-10 xl:grid xl:grid-cols-2 xl:items-center xl:gap-20"
     >
       <Reveal className="flex flex-col items-start gap-6 md:gap-8">
         <SectionChip>{eyebrow}</SectionChip>
