@@ -9,7 +9,7 @@ export function WhatWeDoSection() {
   return (
     <PageSection id="atuacao" contentClassName="flex flex-col gap-10 md:gap-14">
       <SectionChip>{eyebrow}</SectionChip>
-      <div className="flex flex-col gap-10 md:grid md:grid-cols-2 md:gap-20">
+      <div className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-20">
         <div className="flex flex-col gap-6">
           <h2 id="atuacao-titulo" className="text-[32px]/[40px] font-medium md:text-[64px]/[81px]">
             {title}
