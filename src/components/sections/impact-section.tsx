@@ -12,7 +12,13 @@ export function ImpactSection() {
   return (
     <PageSection id="impacto" contentClassName="flex flex-col gap-12 md:gap-16">
       <div className="flex flex-col gap-10 xl:grid xl:grid-cols-2 xl:items-start xl:gap-12">
-        <div className="flex flex-col gap-8">
+        <Reveal className="order-2 flex flex-col gap-6 lg:pt-4">
+          <h2 id="impacto-titulo" className="text-[32px]/[40px] font-medium md:text-[48px]/[60px] xl:text-[64px]/[81px]">
+            {title}
+          </h2>
+          <p className="max-w-[760px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
+        </Reveal>
+        <div className="order-1 flex flex-col gap-8">
           <Reveal className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
             <div className="flex flex-col items-start gap-6">
               <SectionChip>{eyebrow}</SectionChip>
@@ -35,12 +41,6 @@ export function ImpactSection() {
             </dl>
           </RevealGroup>
         </div>
-        <Reveal className="flex flex-col gap-6 lg:pt-4">
-          <h2 id="impacto-titulo" className="text-[32px]/[40px] font-medium md:text-[48px]/[60px] xl:text-[64px]/[81px]">
-            {title}
-          </h2>
-          <p className="max-w-[760px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
-        </Reveal>
       </div>
 
       <div className="flex flex-col gap-6 2xl:grid 2xl:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] 2xl:items-center 2xl:gap-12">
