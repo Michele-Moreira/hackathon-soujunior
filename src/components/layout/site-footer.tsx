@@ -23,7 +23,7 @@ export function SiteFooter() {
             <li key={id}>
               <ExternalLink
                 href={href}
-                className="rounded-sm text-foreground outline-none hover:underline focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                className="rounded-sm text-foreground hover:underline"
               >
                 {links[id]}
               </ExternalLink>
