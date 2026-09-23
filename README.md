@@ -60,6 +60,52 @@ npm run dev        # em outro, e abrir http://localhost:5173/admin/
 
 O `local_backend: true` do `config.yml` faz o painel salvar no arquivo da sua máquina em vez do GitHub, sem pedir login.
 
+## Design
+
+Layout criado no Figma pela Ingrid Oliveira (UX/UI). O Figma é a fonte da verdade do visual: mudou lá, o front ajusta aqui.
+
+- **Figma:** https://www.figma.com/design/LhHc3MPc4JOTDwwbVknUO2
+- **Export (PDF, mockups e ícones):** anexo da [issue #14](https://github.com/Michele-Moreira/hackathon-soujunior/issues/14)
+- Logo, cor e fonte vêm do UI Kit oficial da SouJunior.
+
+### Telas
+
+| Versão | Largura de referência | Status |
+|---|---|---|
+| Desktop | 1728px | arte final, 7 seções |
+| Celular | 440px | arte final, 7 seções |
+| Notebook | 1280px | só protótipo (wireframe) |
+
+### Cores
+
+Todas viram token em `src/styles/globals.css` — nenhum componente leva cor crua.
+
+| Nome | Hex | Token | Onde usa |
+|---|---|---|---|
+| Azul marinho | `#0A1662` | `--background` | fundo da página |
+| Azul SouJunior | `#3C7EF9` | `--primary` | cabeçalho, chips e destaques |
+| Off-white | `#E7E8EA` | `--foreground` / `--secondary` | texto sobre o marinho e botão principal |
+| Preto | `#000000` | `--cta` | botão "Apoie a SouJunior" do topo |
+| Branco | `#FFFFFF` | `--primary-foreground` | texto do chip de seção e do logo |
+
+### Tipografia
+
+**Funnel Display** nos títulos e **Funnel Sans** no texto e nos botões, as duas do UI Kit oficial.
+
+### Medidas
+
+Lidas no Figma: desktop no quadro de 1728px, celular no de 440px.
+
+| Elemento | Desktop | Celular |
+|---|---|---|
+| Altura do cabeçalho | 141px | 141px |
+| Botão do topo ("Apoie a SouJunior") | 328×55 | — |
+| Botão principal do início | 337×68 | 239×40 |
+| Chip de seção (INÍCIO, MISSÃO…) | 126×46 | 109×37 |
+| Mascote da tela inicial | 806×806 | 355×355 |
+
+No celular o cabeçalho vira logo + botão "Apoie" e menu sanduíche.
+
 ## Squad
 
 **SquadForce**
