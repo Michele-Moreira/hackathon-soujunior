@@ -184,6 +184,23 @@ npm run dev
 | `npx decap-server` | sobe o servidor local do painel de conteúdo |
 | `npx shadcn@latest add <componente>` | adiciona um componente do shadcn em `src/components/ui/` |
 
+## Como contribuir
+
+Ninguém sobe direto na `main`: ela é protegida e só recebe mudança por pull request com 1 aprovação de qualquer pessoa do time.
+
+1. **Abra uma issue** com o modelo *Tarefa* (`.github/ISSUE_TEMPLATE/tarefa.md`). O título começa com verbo, e o corpo segue Objetivo · Atividades · Dependências · Anotações Adicionais. O responsável vai no campo *Assignees*, não no texto.
+2. **Coloque a issue no quadro** (link em [Organização](#organização)): A fazer → Em andamento → Aguardando verificação → Pronto.
+3. **Avise no grupo do time** que começou, marcando todos.
+4. **Crie um branch só pra tarefa**, no formato `tipo/assunto` (`feat/...`, `fix/...`, `docs/...`).
+5. **Faça os commits** em [Conventional Commits](https://www.conventionalcommits.org/pt-br/): minúsculo, em inglês e com escopo — ex.: `fix(layout): close mobile menu on link click`.
+6. **Abra o pull request contra a `main`.** A Vercel gera um preview do branch; quem for aprovar confere o preview antes.
+
+```bash
+git switch -c fix/header-menu origin/main
+```
+
+Só texto da página? Dá para mudar pelo painel `/admin` — ver [Conteúdo da página](#conteúdo-da-página).
+
 ## Organização
 
 Base do projeto — stack, layout de `src/`, convenções e fluxo de entrega — em `docs/projeto.md`.

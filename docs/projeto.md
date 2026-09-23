@@ -20,7 +20,7 @@ Serve para não mexer no que é de outra pessoa. O estado de cada tarefa fica no
 
 | Pessoa | Frente |
 |---|---|
-| Henrique Camello | Tech lead. Verifica e aceita todos os pull requests |
+| Henrique Camello | Tech lead e mentor do time |
 | Michele Moreira | Front-end: seções, painel de conteúdo, paleta |
 | Cauã Ventura | Back-end. Seções Impacto e Financiamento |
 | Ingrid Oliveira | Design das seções. O front ajusta conforme chega |
@@ -116,19 +116,15 @@ As regras detalhadas vivem em `.claude/rules/` e carregam sozinhas conforme o ar
 
 ## Fluxo de trabalho
 
-**Ninguém sobe direto na `main`.** Combinado com o Henrique:
-
-1. Avisar no grupo do WhatsApp o que começou, marcando @todos — a banca avalia a participação de cada um.
-2. Criar um branch só pra essa tarefa.
-3. Fazer os commits e abrir um pull request pro Henrique verificar e aceitar.
-4. Mover o cartão da tarefa no [quadro do projeto](https://github.com/users/Michele-Moreira/projects/1).
+**Ninguém sobe direto na `main`.** O passo a passo está em
+[Como contribuir](../README.md#como-contribuir), no README.
 
 Ferramentas:
 
 - **Commits:** skill `git-commit` (Conventional Commits, lowercase em inglês, escopo obrigatório, sem co-author/IA).
 - **Pull requests:** skill `create-pr` (título Conventional Commits, corpo Summary + Test plan em inglês, sem reviewers/draft/IA).
 - **Revisão:** `/diff-review` antes de abrir PR; o subagent `code-reviewer` cobre correção + convenções.
-- **Testes:** o subagent `test-runner` roda Vitest/Playwright e reporta — ver *Pendências conhecidas*.
+- **Testes:** manuais, em `docs/qa.md` — ver *Pendências conhecidas*.
 - **Bugs:** o subagent `debugger` faz debugging sistemático antes de propor correção.
 
 ## Skills de base
@@ -159,7 +155,7 @@ perderem; nenhuma foi corrigida ainda.
 
 - **Não existe suíte automatizada.** Não há vitest, playwright, arquivo de teste nem script `test` no
   `package.json` (só `dev`, `build`, `lint`, `preview`). As menções a Vitest/Playwright acima descrevem
-  intenção, não realidade. O subagent `test-runner` e a skill `new-component` mandam rodar `npm run test`,
+  intenção, não realidade. A skill `new-component` manda rodar `npm run test`,
   `npm run type-check` e `npm run test:e2e`, que não existem. O teste real hoje é manual, em `docs/qa.md`.
 - **A tabela de Stack do `README.md`** cita versões de React, TypeScript e Oxlint acima das declaradas no
   `package.json`.
