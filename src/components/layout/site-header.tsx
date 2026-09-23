@@ -44,8 +44,8 @@ export function SiteHeader() {
           <SouJuniorLogo className="h-[38px] md:h-[55px]" />
         </a>
 
-        <nav aria-label="Seções da página" className="hidden lg:block">
-          <ul className="flex items-center gap-10">
+        <nav aria-label="Seções da página" className="hidden 2xl:block">
+          <ul className="flex items-center gap-7">
             {nav.map((link) => {
               const isActive = link.href.slice(1) === activeId
               return (
@@ -68,7 +68,7 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <Button asChild variant="cta" className="hidden h-[55px] px-8 text-xl lg:inline-flex">
+        <Button asChild variant="cta" className="hidden h-[55px] px-8 text-xl 2xl:inline-flex">
           <ExternalLink href={APOIA_SE_URL}>{supportLabel}</ExternalLink>
         </Button>
 
@@ -78,7 +78,7 @@ export function SiteHeader() {
           aria-controls="menu-mobile"
           aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           onClick={handleToggleMenu}
-          className="rounded-md p-2 text-primary-foreground outline-none focus-visible:ring-[3px] focus-visible:ring-primary-foreground/50 lg:hidden"
+          className="rounded-md p-2 text-primary-foreground outline-none focus-visible:ring-[3px] focus-visible:ring-primary-foreground/50 2xl:hidden"
         >
           {isMenuOpen ? <X className="size-8" /> : <Menu className="size-8" />}
         </button>
@@ -88,7 +88,7 @@ export function SiteHeader() {
         id="menu-mobile"
         inert={!isMenuOpen}
         data-open={isMenuOpen || undefined}
-        className="grid grid-rows-[0fr] overflow-hidden bg-primary transition-[grid-template-rows] [transition-duration:var(--duration-quick)] ease-out data-open:grid-rows-[1fr] motion-reduce:transition-none lg:hidden"
+        className="grid grid-rows-[0fr] overflow-hidden bg-primary transition-[grid-template-rows] [transition-duration:var(--duration-quick)] ease-out data-open:grid-rows-[1fr] motion-reduce:transition-none 2xl:hidden"
       >
         <div className="overflow-hidden border-t border-primary-foreground/20 px-9 pb-8">
           <nav aria-label="Seções da página, menu do celular">
