@@ -1,17 +1,18 @@
+import type { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
 
-type Props = {
+type Props = ComponentProps<'div'> & {
   value: string
   label: string
   layout?: 'inline' | 'stacked'
-  className?: string
 }
 
-export function StatCard({ value, label, layout = 'inline', className }: Props) {
+export function StatCard({ value, label, layout = 'inline', className, ...props }: Props) {
   const isStacked = layout === 'stacked'
 
   return (
     <div
+      {...props}
       className={cn(
         'flex rounded-2xl bg-foreground',
         isStacked

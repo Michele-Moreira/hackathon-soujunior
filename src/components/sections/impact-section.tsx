@@ -23,9 +23,14 @@ export function ImpactSection() {
           <RevealGroup asChild>
             <dl className="grid gap-4 sm:grid-cols-3 md:gap-5">
               {communityStats.map((stat) => (
-                <div key={stat.label} data-reveal>
-                  <StatCard value={stat.value} label={stat.label} layout="stacked" className="h-full" />
-                </div>
+                <StatCard
+                  key={stat.label}
+                  data-reveal
+                  value={stat.value}
+                  label={stat.label}
+                  layout="stacked"
+                  className="h-full"
+                />
               ))}
             </dl>
           </RevealGroup>
@@ -45,9 +50,7 @@ export function ImpactSection() {
         <RevealGroup asChild>
           <dl className="grid gap-4 md:grid-cols-2 md:gap-6">
             {networkStats.map((stat) => (
-              <div key={stat.label} data-reveal>
-                <StatCard value={stat.value} label={stat.label} className="h-full" />
-              </div>
+              <StatCard key={stat.label} data-reveal value={stat.value} label={stat.label} className="h-full" />
             ))}
           </dl>
         </RevealGroup>
