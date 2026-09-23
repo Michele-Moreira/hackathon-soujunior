@@ -101,25 +101,27 @@ export function SiteHeader() {
         data-open={isMenuOpen || undefined}
         className="grid grid-rows-[0fr] overflow-hidden bg-primary transition-[grid-template-rows] [transition-duration:var(--duration-quick)] ease-out data-open:grid-rows-[1fr] motion-reduce:transition-none xl:hidden"
       >
-        <div className="overflow-hidden border-t border-primary-foreground/20 px-9 pb-8">
-          <nav aria-label="Seções da página, menu do celular">
-            <ul className="flex flex-col">
-              {nav.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={handleCloseMenu}
-                    className="block border-b border-primary-foreground/20 py-4 text-lg text-primary-foreground"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <Button asChild variant="cta" className="mt-6 h-[52px] w-full text-base">
-            <ExternalLink href={APOIA_SE_URL}>{supportLabel}</ExternalLink>
-          </Button>
+        <div className="min-h-0 overflow-hidden">
+          <div className="border-t border-primary-foreground/20 px-9 pb-8">
+            <nav aria-label="Seções da página, menu do celular">
+              <ul className="flex flex-col">
+                {nav.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      onClick={handleCloseMenu}
+                      className="block border-b border-primary-foreground/20 py-4 text-lg text-primary-foreground"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <Button asChild variant="cta" className="mt-6 h-[52px] w-full text-base">
+              <ExternalLink href={APOIA_SE_URL}>{supportLabel}</ExternalLink>
+            </Button>
+          </div>
         </div>
       </div>
     </header>
