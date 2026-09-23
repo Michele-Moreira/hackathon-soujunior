@@ -5,6 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --font-display: "Funnel Display", ui-sans-serif, system-ui, sans-serif;
+    --font-sans: "Funnel Sans", ui-sans-serif, system-ui, sans-serif;
     --radius-sm: calc(var(--radius) * 0.6);
     --radius-md: calc(var(--radius) * 0.8);
     --radius-lg: var(--radius);
@@ -28,6 +30,11 @@
     --color-accent-foreground: var(--accent-foreground);
     --color-cta: var(--cta);
     --color-cta-foreground: var(--cta-foreground);
+    --color-band: var(--band);
+    --color-card-muted: var(--card-muted);
+    --color-accent-strong: var(--accent-strong);
+    --color-ink: var(--ink);
+    --color-highlight: var(--highlight);
     --color-destructive: var(--destructive);
     --color-border: var(--border);
     --color-input: var(--input);
@@ -65,6 +72,11 @@
     --accent-foreground: oklch(1 0 0);
     --cta: oklch(0 0 0);
     --cta-foreground: oklch(1 0 0);
+    --band: oklch(0.297 0.158 267.1);
+    --card-muted: oklch(0.869 0.017 278.5);
+    --accent-strong: oklch(0.378 0.242 265.9);
+    --ink: oklch(0.274 0.019 272.0);
+    --highlight: oklch(0.861 0.173 91.9);
     --destructive: oklch(0.577 0.245 27.325);
     --border: oklch(1 0 0 / 14%);
     --input: oklch(1 0 0 / 14%);
@@ -126,6 +138,9 @@
     @apply border-border outline-ring/50;
     }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-sans text-foreground;
+    }
+  h1, h2, h3 {
+    @apply font-display;
     }
 }
