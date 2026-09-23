@@ -13,7 +13,7 @@ export function PageLoader({ step, isLoaded }: Props) {
     <div
       role="status"
       className={cn(
-        'fixed inset-0 z-50 flex flex-col items-center justify-center gap-10 bg-background transition-opacity duration-400 ease-out motion-reduce:transition-none',
+        'fixed inset-0 z-50 flex flex-col items-center justify-center gap-10 bg-background transition-opacity [transition-duration:var(--duration-slow)] ease-out motion-reduce:transition-none',
         isLoaded && 'pointer-events-none opacity-0',
       )}
     >
@@ -22,7 +22,7 @@ export function PageLoader({ step, isLoaded }: Props) {
       <div className="h-1 w-56 overflow-hidden rounded-full bg-foreground/15 md:w-72">
         <div
           className={cn(
-            'h-full origin-left rounded-full bg-primary transition-transform duration-400 ease-out motion-reduce:transition-none',
+            'h-full origin-left rounded-full bg-primary transition-transform [transition-duration:var(--duration-slow)] ease-out motion-reduce:transition-none',
             FILL_BY_STEP[Math.min(step, FILL_BY_STEP.length - 1)],
           )}
         />

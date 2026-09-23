@@ -58,6 +58,9 @@
 
 :root {
     --radius: 0.625rem;
+    --duration-quick: 200ms;
+    --duration-base: 300ms;
+    --duration-slow: 400ms;
     --background: oklch(0.259 0.132 267.4);
     --foreground: oklch(0.931 0.003 264.5);
     --card: oklch(0.320 0.128 267.4);
@@ -153,8 +156,8 @@
     opacity: 0;
     transform: translateY(16px);
     transition:
-      opacity 300ms var(--ease-out),
-      transform 300ms var(--ease-out);
+      opacity var(--duration-base) var(--ease-out),
+      transform var(--duration-base) var(--ease-out);
     }
   [data-reveal][data-visible],
   [data-reveal-group][data-visible] > [data-reveal] {
