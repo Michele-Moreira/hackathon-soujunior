@@ -15,14 +15,11 @@ export function SiteFooter() {
   const { tagline, links, copyright, campaign } = content.footer
 
   return (
-    <footer className="bg-surface-deep px-9 py-12 md:px-11">
+    <footer className="bg-surface-deep px-9 py-10 md:px-11">
       <div className="mx-auto w-full max-w-[1636px]">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div className="flex flex-col gap-4">
-            <SouJuniorLogo className="h-[38px] text-foreground md:h-[46px]" />
-            <p className="text-foreground/80">{tagline}</p>
-          </div>
-          <ul className="flex flex-wrap items-center gap-x-8 gap-y-3">
+        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <SouJuniorLogo className="h-[30px] text-foreground md:h-[34px]" />
+          <ul className="flex flex-wrap items-center gap-x-8 gap-y-2">
             {FOOTER_LINKS.map(({ id, href }) => (
               <li key={id}>
                 <ExternalLink
@@ -35,7 +32,8 @@ export function SiteFooter() {
             ))}
           </ul>
         </div>
-        <div className="mt-10 flex flex-col items-center gap-1 border-t border-foreground/15 pt-8 text-sm">
+        <p className="mt-7 text-foreground/80">{tagline}</p>
+        <div className="mt-6 flex flex-col items-center gap-1 border-t border-foreground/15 pt-4 text-sm">
           <p className="text-foreground">{copyright}</p>
           <p className="text-foreground/70">{campaign}</p>
         </div>
