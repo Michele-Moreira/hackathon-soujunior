@@ -23,7 +23,7 @@ export function FundingSection() {
 
       <div className="bg-band px-9 py-14 md:px-11 md:py-16">
         <div className="mx-auto w-full max-w-[1636px]">
-          <ul className="grid gap-6 md:grid-cols-4 md:gap-8">
+          <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 md:gap-8">
             {cards.map((card) => (
               <li key={card.title} className="flex flex-col gap-4 rounded-2xl bg-card-muted p-6 md:p-7">
                 <h3 className="flex items-center gap-3 text-lg font-semibold text-accent-strong">
@@ -36,7 +36,7 @@ export function FundingSection() {
               </li>
             ))}
           </ul>
-          <ul className="mt-10 grid gap-5 border-t border-foreground/15 pt-10 md:grid-cols-4 md:gap-8">
+          <ul className="mt-10 grid gap-5 border-t border-foreground/15 pt-10 md:grid-cols-2 lg:grid-cols-4 md:gap-8">
             {destinations.map((destination) => (
               <li key={destination.label} className="flex items-start gap-3">
                 <ContentIcon name={destination.icon} className="mt-0.5 size-5 shrink-0 text-foreground" />
