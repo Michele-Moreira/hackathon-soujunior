@@ -119,10 +119,21 @@ O cabeçalho desktop é 96px e não os 141px do Figma: com um logo de 55px a bar
 tela. Redução combinada com a Michele, que confirmou com a Ingrid. No celular a arte mostra 141px
 contando os 50px da barra de status do iOS, que é do mock-up e não da página — a barra em si tem 91px.
 
-As seções de duas colunas empilham até sobrar largura para as duas. A coluna do mascote pede a
-largura natural da imagem, então dividir cedo aperta o texto ao lado: em Impacto o topo só vira
-duas colunas em 1280px, e a faixa "Rede de apoio" só põe o rótulo ao lado dos cards em 1536px,
-senão a legenda vaza da caixa.
+Cada seção de duas colunas só se divide quando o conteúdo mais largo dela cabe na coluna. A regra
+é o conteúdo, não um breakpoint único: dividir cedo aperta o texto ao lado, e a palavra mais longa
+passa a invadir o espaçamento do card. Onde cada uma vira:
+
+| Seção | Divide em | O que define |
+|---|---|---|
+| Início, Missão, Atuação, Faça parte | 1024px | cabem; a coluna do mascote é fração, não largura natural da imagem |
+| Financiamento (topo) | 1024px | cabe |
+| Financiamento (cards da faixa) | 1280px | 4 colunas em 1024px deixam 106px para o título, e "Infraestrutura" mede 123px |
+| Impacto (topo) | 1280px | em 1024px o card de comunidade fica com 94px de conteúdo |
+| Apoie | 1280px | os tiers são sempre 2 por linha; em 1024px o card teria 134px e "R$10" mede 149px |
+| Impacto ("Rede de apoio") | 1536px | abaixo disso o rótulo em cima, senão a legenda vaza da caixa |
+
+As larguras de texto acima são medidas com as métricas das fontes Funnel Sans e Funnel Display,
+não estimadas.
 
 O cabeçalho é logo + menu sanduíche até 1536px. A barra inteira do Figma mede 1482px (logo 352px,
 navegação 802px, botão 328px); mesmo com o logo em 290px a linha pede cerca de 1420px, então em
