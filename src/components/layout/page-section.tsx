@@ -13,7 +13,7 @@ export function PageSection({ id, className, contentClassName, children }: Props
     <section
       id={id}
       aria-labelledby={`${id}-titulo`}
-      className={cn('scroll-mt-[91px] px-9 py-16 md:scroll-mt-[96px] md:px-11 md:py-24', className)}
+      className={cn('px-9 py-16 md:px-11 md:py-24', className)}
     >
       <div className={cn('mx-auto w-full max-w-[1636px]', contentClassName)}>{children}</div>
     </section>
