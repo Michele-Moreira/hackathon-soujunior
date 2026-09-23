@@ -10,6 +10,7 @@ import { APOIA_SE_URL } from '@/lib/links'
 import { cn } from '@/lib/utils'
 
 const SECTION_IDS = content.header.nav.map((link) => link.href.slice(1))
+const DESKTOP_NAV = '(min-width: 80rem)'
 
 export function SiteHeader() {
   const { nav, supportLabel } = content.header
@@ -30,6 +31,16 @@ export function SiteHeader() {
     document.addEventListener('keydown', closeOnEscape)
     return () => document.removeEventListener('keydown', closeOnEscape)
   }, [isMenuOpen])
+
+  useEffect(() => {
+    const query = window.matchMedia(DESKTOP_NAV)
+    const closeOnDesktop = () => {
+      if (query.matches) setIsMenuOpen(false)
+    }
+
+    query.addEventListener('change', closeOnDesktop)
+    return () => query.removeEventListener('change', closeOnDesktop)
+  }, [])
 
   return (
     <header
