@@ -16,23 +16,25 @@ export function App() {
   return (
     <>
       {isLoaderMounted ? <PageLoader step={step} isLoaded={isLoaded} /> : null}
-      <a
-        href="#conteudo"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-20 focus:rounded-md focus:bg-background focus:px-4 focus:py-2"
-      >
-        Pular para o conteúdo
-      </a>
-      <SiteHeader />
-      <main id="conteudo">
-        <HeroSection />
-        <MissionSection />
-        <WhatWeDoSection />
-        <ImpactSection />
-        <FundingSection />
-        <CommunitySection />
-        <SupportSection />
-      </main>
-      <SiteFooter />
+      <div inert={isLoaderMounted}>
+        <a
+          href="#conteudo"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-20 focus:rounded-md focus:bg-background focus:px-4 focus:py-2"
+        >
+          Pular para o conteúdo
+        </a>
+        <SiteHeader />
+        <main id="conteudo">
+          <HeroSection />
+          <MissionSection />
+          <WhatWeDoSection />
+          <ImpactSection />
+          <FundingSection />
+          <CommunitySection />
+          <SupportSection />
+        </main>
+        <SiteFooter />
+      </div>
     </>
   )
 }
