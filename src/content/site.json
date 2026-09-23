@@ -3,56 +3,70 @@
     "eyebrow": "Impacto",
     "title": "Uma rede em constante movimento",
     "description": "Os números que mostram a força da comunidade.",
-    "stats": [
+    "communityTitle": "A comunidade hoje",
+    "communityStats": [
       {
-        "value": "",
-        "label": ""
+        "value": "120",
+        "label": "pessoas conectadas"
       },
       {
-        "value": "",
-        "label": ""
+        "value": "35",
+        "label": "mentores voluntários"
       },
       {
-        "value": "",
-        "label": ""
+        "value": "+50",
+        "label": "pessoas inseridas no mercado de TI"
+      }
+    ],
+    "networkTitle": "Rede de apoio (apoia.se)",
+    "networkStats": [
+      {
+        "value": "140",
+        "label": "pessoas já apoiaram a SouJunior desde o início"
       },
       {
-        "value": "",
-        "label": ""
+        "value": "40",
+        "label": "apoiadores que voltam a apoiar todo mês, em média"
       }
     ]
   },
   "community": {
     "eyebrow": "Faça parte",
     "title": "Conexões também movem a comunidade",
-    "description": "Além de doar, você pode fortalecer a SouJunior participando dos canais oficiais.",
-    "channels": {
-      "discord": {
-        "name": "Discord",
-        "description": "Tire dúvidas e participe da comunidade"
+    "description": "Existem diferentes formas de contribuir para que essa rede continue crescendo.",
+    "personas": [
+      {
+        "icon": "users",
+        "title": "Júnior / Comunidade",
+        "quote": "Posso contribuir mesmo com pouco.",
+        "description": "Participe da comunidade, compartilhe as iniciativas e ajude mais talentos a encontrar esse espaço."
       },
-      "whatsapp": {
-        "name": "WhatsApp",
-        "description": "Receba os avisos oficiais"
+      {
+        "icon": "message",
+        "title": "Mentor / Voluntário",
+        "quote": "Quero compartilhar conhecimento e experiência.",
+        "description": "Colabore com orientação, trocas de repertório e apoio às pessoas que estão construindo experiência."
       },
-      "github": {
-        "name": "GitHub",
-        "description": "Contribua com os projetos open source"
+      {
+        "icon": "briefcase",
+        "title": "Parceiro / Apoiador",
+        "quote": "Quero apoiar esse movimento de crescimento, abrir portas e fortalecer a rede.",
+        "description": "Conecte empresas, ofereça oportunidades e ajude a comunidade a ganhar escala e visibilidade."
       }
-    }
+    ]
   },
   "mission": {
-    "eyebrow": "Nossa missão",
+    "eyebrow": "Missão",
     "title": "Criamos oportunidades para novos talentos em tecnologia",
-    "description": "Uma comunidade que abre portas para quem está começando na área.",
+    "description": "Conectamos novos talentos a experiências, pessoas e oportunidades para dar os primeiros passos na tecnologia.",
     "cards": [
       {
         "title": "Missão",
-        "text": ""
+        "text": "Conectar potenciais às oportunidades para transformar a realidade das pessoas e das empresas."
       },
       {
         "title": "Visão",
-        "text": ""
+        "text": "Ser a maior incubadora de talentos tech nacional, tornando-se referência na formação dos Juninhos e Juninhas através de seu laboratório de experiência."
       }
     ]
   },
@@ -83,48 +97,137 @@
         "href": "#faca-parte"
       }
     ],
-    "supportLabel": "Apoie"
+    "supportLabel": "Apoie a SouJunior"
   },
   "support": {
-    "eyebrow": "Apoie",
-    "title": "Ajude a manter essa iniciativa",
-    "description": "Toda contribuição conta. Escolha um valor abaixo ou defina o seu no Apoia.se.",
-    "supportLabel": "Apoiar pelo Apoia.se"
+    "eyebrow": "Apoie a SouJunior",
+    "title": "Transforme aprendizado em experiência e oportunidade",
+    "description": "Sua contribuição recorrente ajuda a manter a SouJunior e suas iniciativas gratuitas. É possível apoiar a partir de R$ 2 por mês.",
+    "supportLabel": "Apoiar pelo Apoia.se",
+    "tiers": [
+      {
+        "value": "R$2",
+        "title": "Já faz a diferença",
+        "description": "Ajuda a manter a comunidade ativa."
+      },
+      {
+        "value": "R$5",
+        "title": "Apoia nossas iniciativas",
+        "description": "Contribui para mentorias, eventos e conteúdo."
+      },
+      {
+        "value": "R$10",
+        "title": "Fortalece a comunidade",
+        "description": "Apoia a infraestrutura e manutenção dos projetos."
+      },
+      {
+        "value": "R$20",
+        "title": "Impulsiona novos projetos",
+        "description": "Ajuda a expandir o alcance e criar novas oportunidades."
+      }
+    ]
   },
   "hero": {
     "eyebrow": "Início",
     "title": "Apoie quem está construindo o próprio amanhã",
     "description": "A SouJunior transforma o aprendizado em experiência real e o seu apoio ajuda esse trabalho a continuar.",
-    "supportLabel": "Apoie a partir de R$ 2,00"
+    "supportLabel": "Apoie a partir de R$2"
   },
   "footer": {
-    "copyright": "© 2026 SouJunior"
+    "tagline": "O júnior de hoje é o sênior de amanhã.",
+    "links": {
+      "apoiase": "Apoia.se",
+      "discord": "Discord",
+      "whatsapp": "WhatsApp",
+      "github": "GitHub",
+      "site": "Site institucional"
+    },
+    "copyright": "© 2026 SouJunior",
+    "campaign": "Campanha oficial via Apoia.se"
   },
   "whatWeDo": {
     "eyebrow": "Atuação",
     "title": "Transformamos aprendizado em experiência prática",
-    "description": "Mentorias, projetos open source e uma comunidade ativa para ganhar experiência de verdade."
+    "description": "Experiências, trocas e projetos aproximam novos talentos da dinâmica real do mercado.",
+    "pillars": [
+      {
+        "icon": "code",
+        "title": "Projetos Práticos",
+        "description": "Produtos reais, colaboração em equipe e experiência para apresentar ao mercado."
+      },
+      {
+        "icon": "graduation",
+        "title": "Aprendizado e mentoria",
+        "description": "Trocas técnicas e comportamentais com quem compartilha repertório."
+      },
+      {
+        "icon": "users",
+        "title": "Comunidade e networking",
+        "description": "Conexões entre talentos, voluntários, recrutadores e empresas."
+      },
+      {
+        "icon": "github",
+        "title": "Open Source e oportunidades",
+        "description": "Projetos abertos que aproximam prática, visibilidade e novos caminhos."
+      }
+    ],
+    "programs": [
+      {
+        "title": "SouJunior Labs",
+        "description": "Um lugar para praticar conhecimentos, colaborar em equipe e ganhar experiência real do mercado."
+      },
+      {
+        "title": "SouJunior Talk",
+        "description": "Um espaço para praticar inglês com pessoas reais e desenvolver confiança na comunicação."
+      }
+    ]
   },
   "funding": {
     "eyebrow": "Financiamento",
     "title": "Da contribuição à continuidade das iniciativas",
     "description": "Cada contribuição ajuda a manter a estrutura que sustenta a comunidade e os projetos da SouJunior.",
-    "expenses": [
+    "cards": [
       {
-        "service": "",
-        "amount": 0
+        "icon": "heart",
+        "title": "Apoio",
+        "description": "Contribuições e parcerias que tornam tudo possível."
       },
       {
-        "service": "",
-        "amount": 0
+        "icon": "server",
+        "title": "Infraestrutura e recursos",
+        "description": "Servidores, ferramentas e base operacional."
       },
       {
-        "service": "",
-        "amount": 0
+        "icon": "refresh",
+        "title": "Continuidade das iniciativas",
+        "description": "Manutenção da comunidade e dos projetos."
       },
       {
-        "service": "",
-        "amount": 0
+        "icon": "users",
+        "title": "Impacto na comunidade",
+        "description": "Experiências gratuitas para novos talentos."
+      }
+    ],
+    "destinations": [
+      {
+        "icon": "server",
+        "label": "Servidores",
+        "detail": "cerca de R$ 375 por mês na AWS e na Vultr"
+      },
+      {
+        "icon": "briefcase",
+        "label": "Ferramentas e manutenção",
+        "detail": "R$ 490 por ano de domínio"
+      },
+      {
+        "icon": "users",
+        "label": "Comunidade e projetos",
+        "detail": ""
+      },
+      {
+        "icon": "star",
+        "label": "Iniciativas gratuitas",
+        "detail": ""
       }
     ]
   }

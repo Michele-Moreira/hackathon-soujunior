@@ -86,7 +86,13 @@ Todas viram token em `src/styles/globals.css` — nenhum componente leva cor cru
 | Azul SouJunior | `#3C7EF9` | `--primary` | cabeçalho, chips e destaques |
 | Off-white | `#E7E8EA` | `--foreground` / `--secondary` | texto sobre o marinho e botão principal |
 | Preto | `#000000` | `--cta` | botão "Apoie a SouJunior" do topo |
-| Branco | `#FFFFFF` | `--primary-foreground` | texto do chip de seção e do logo |
+| Branco | `#FFFFFF` | `--primary-foreground` | texto do chip de seção e cards de Faça parte |
+| Azul da faixa | `#0D1B7A` | `--band` | faixa inferior de Financiamento |
+| Cinza do card | `#D1D3DF` | `--card-muted` | cards sobre essa faixa e cards de Atuação |
+| Azul forte | `#0E14BF` | `--accent-strong` | números e títulos dentro dos cards |
+| Grafite | `#242731` | `--ink` | texto dentro dos cards claros |
+| Amarelo | `#FACC15` | `--highlight` | ícones dos pilares de Atuação |
+| Marinho profundo | `#060D3E` | `--surface-deep` | fundo do rodapé |
 
 ### Tipografia
 
@@ -94,17 +100,29 @@ Todas viram token em `src/styles/globals.css` — nenhum componente leva cor cru
 
 ### Medidas
 
-Lidas no Figma: desktop no quadro de 1728px, celular no de 440px.
+Lidas no Figma: desktop no quadro de 1728px, celular no de 440px. O quadro de 440px é a largura
+lógica do iPhone 16 Pro Max, então as medidas do celular são CSS pixels 1:1 no aparelho.
 
 | Elemento | Desktop | Celular |
 |---|---|---|
-| Altura do cabeçalho | 141px | 141px |
+| Altura do cabeçalho | 96px | 91px |
+| Largura útil do conteúdo | 1636px | viewport menos 36px de cada lado |
 | Botão do topo ("Apoie a SouJunior") | 328×55 | — |
 | Botão principal do início | 337×68 | 239×40 |
-| Chip de seção (INÍCIO, MISSÃO…) | 126×46 | 109×37 |
+| Chip de seção (INÍCIO, MISSÃO…) | altura 46px | altura 37px |
 | Mascote da tela inicial | 806×806 | 355×355 |
 
-No celular o cabeçalho vira logo + botão "Apoie" e menu sanduíche.
+O chip tem altura fixa e largura acompanhando o texto — "IMPACTO" mede 158px no desktop. O 126px
+que constava aqui era a medida de um rótulo só.
+
+O cabeçalho desktop é 96px e não os 141px do Figma: com um logo de 55px a barra lia como oca na
+tela. Redução combinada com a Michele, que confirmou com a Ingrid. No celular a arte mostra 141px
+contando os 50px da barra de status do iOS, que é do mock-up e não da página — a barra em si tem 91px.
+
+As seções de duas colunas só se dividem a partir de 1024px. Abaixo disso empilham, porque a coluna
+do mascote pede a largura natural da imagem e estouraria a tela em 768px.
+
+No celular o cabeçalho vira logo + menu sanduíche.
 
 ## Squad
 

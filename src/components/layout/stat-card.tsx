@@ -8,9 +8,9 @@ type Props = {
 
 export function StatCard({ value, label, className }: Props) {
   return (
-    <div className={cn('flex flex-col-reverse justify-center gap-1 p-6', className)}>
-      <dt className="text-sm text-muted-foreground">{label}</dt>
-      <dd className="text-3xl font-bold md:text-4xl">{value}</dd>
+    <div className={cn('flex items-center gap-5 rounded-2xl bg-foreground px-6 py-6 md:px-8', className)}>
+      <dt className="text-ink md:text-lg/[26px]">{label}</dt>
+      <dd className="order-first text-[40px]/none font-bold text-accent-strong md:text-[52px]/none">{value}</dd>
     </div>
   )
 }
