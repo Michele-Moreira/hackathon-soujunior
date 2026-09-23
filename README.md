@@ -135,9 +135,11 @@ passa a invadir o espaçamento do card. Onde cada uma vira:
 As larguras de texto acima são medidas com as métricas das fontes Funnel Sans e Funnel Display,
 não estimadas.
 
-O cabeçalho é logo + menu sanduíche até 1536px. A barra inteira do Figma mede 1482px (logo 352px,
-navegação 802px, botão 328px); mesmo com o logo em 290px a linha pede cerca de 1420px, então em
-1280px ela ainda não cabe.
+O cabeçalho é logo + menu sanduíche até 1280px, e mostra a navegação inteira a partir dali. O que
+mandamos para a tela pede 1147px: logo 290px, navegação 630px (os seis rótulos em 20px mais os
+cinco vãos de 28px) e botão 227px. Em 1280px sobram 1192px de largura útil, ou seja 22px de
+respiro em cada vão; em 1366px já são 65px. Não confundir com os 1482px que a barra mede no Figma
+— lá o logo tem 352px e a navegação 802px.
 
 ## Squad
 
