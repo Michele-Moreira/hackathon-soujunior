@@ -1,36 +1,35 @@
-import { ExternalLink } from '@/components/layout/external-link'
+import { ContentIcon } from '@/components/layout/content-icon'
+import { MascotImage } from '@/components/layout/mascot-image'
 import { PageSection } from '@/components/layout/page-section'
-import { SectionHeading } from '@/components/layout/section-heading'
+import { SectionChip } from '@/components/layout/section-chip'
 import content from '@/content/site.json'
-import { DISCORD_URL, GITHUB_URL, WHATSAPP_URL } from '@/lib/links'
-
-const COMMUNITY_CHANNELS = [
-  { id: 'discord', href: DISCORD_URL },
-  { id: 'whatsapp', href: WHATSAPP_URL },
-  { id: 'github', href: GITHUB_URL },
-] as const
 
 export function CommunitySection() {
-  const { eyebrow, title, description, channels } = content.community
+  const { eyebrow, title, description, personas } = content.community
 
   return (
-    <PageSection id="faca-parte" className="md:grid md:grid-cols-5 md:items-center">
-      <div className="md:col-span-2">
-        <SectionHeading sectionId="faca-parte" eyebrow={eyebrow} title={title} description={description} />
+    <PageSection id="faca-parte" contentClassName="flex flex-col gap-10 md:gap-14">
+      <div className="flex flex-col gap-8 md:grid md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-12">
+        <div className="flex flex-col items-start gap-6 md:gap-8">
+          <SectionChip>{eyebrow}</SectionChip>
+          <h2 id="faca-parte-titulo" className="max-w-[640px] text-[32px]/[40px] font-medium md:text-[64px]/[81px]">
+            {title}
+          </h2>
+          <p className="max-w-[640px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
+        </div>
+        <MascotImage name="faca-parte" className="mx-auto md:mx-0" />
       </div>
-      <ul className="flex flex-col gap-4 md:col-span-3">
-        {COMMUNITY_CHANNELS.map(({ id, href }) => (
-          <li key={id}>
-            <ExternalLink
-              href={href}
-              className="flex flex-col gap-4 rounded-lg border p-6 outline-none hover:bg-accent focus-visible:ring-[3px] focus-visible:ring-ring/50"
-            >
-              <span aria-hidden="true" className="size-10 rounded-full bg-muted" />
-              <span className="flex flex-col gap-1">
-                <span className="font-semibold">{channels[id].name}</span>
-                <span className="text-sm text-muted-foreground">{channels[id].description}</span>
-              </span>
-            </ExternalLink>
+      <ul className="grid gap-6 md:grid-cols-3 md:gap-8">
+        {personas.map((persona) => (
+          <li key={persona.title} className="flex flex-col rounded-2xl bg-primary-foreground">
+            <span className="flex items-center border-b border-ink/10 px-7 py-6 text-primary">
+              <ContentIcon name={persona.icon} className="size-7" />
+            </span>
+            <div className="flex flex-col gap-3 px-7 py-6">
+              <h3 className="font-semibold text-ink">{persona.title}</h3>
+              <p className="text-sm text-accent-strong italic">&ldquo;{persona.quote}&rdquo;</p>
+              <p className="text-sm/[20px] text-ink/80">{persona.description}</p>
+            </div>
           </li>
         ))}
       </ul>

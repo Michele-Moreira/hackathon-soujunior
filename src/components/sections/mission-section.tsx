@@ -1,22 +1,33 @@
+import { MascotImage } from '@/components/layout/mascot-image'
 import { PageSection } from '@/components/layout/page-section'
-import { SectionHeading } from '@/components/layout/section-heading'
-import { TextPlaceholder } from '@/components/layout/text-placeholder'
+import { SectionChip } from '@/components/layout/section-chip'
 import content from '@/content/site.json'
 
 export function MissionSection() {
   const { eyebrow, title, description, cards } = content.mission
 
   return (
-    <PageSection id="missao" className="md:grid md:grid-cols-2 md:items-center">
-      <SectionHeading sectionId="missao" eyebrow={eyebrow} title={title} description={description} />
-      <ul className="flex flex-col">
-        {cards.map((card) => (
-          <li key={card.title} className="flex flex-col gap-6 border p-5 not-first:-mt-px first:rounded-t-lg last:rounded-b-lg">
-            <h3 className="text-xl font-semibold">{card.title}</h3>
-            {card.text ? <p className="text-muted-foreground">{card.text}</p> : <TextPlaceholder />}
-          </li>
-        ))}
-      </ul>
+    <PageSection id="missao" contentClassName="flex flex-col gap-10">
+      <SectionChip>{eyebrow}</SectionChip>
+      <div className="flex flex-col gap-10 md:grid md:grid-cols-[auto_minmax(0,1fr)] md:items-center md:gap-16">
+        <MascotImage name="missao" className="mx-auto md:mx-0" />
+        <div className="flex flex-col gap-8">
+          <h2 id="missao-titulo" className="text-[32px]/[40px] font-medium md:text-[64px]/[81px]">
+            {title}
+          </h2>
+          <p className="max-w-[860px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
+          <ul className="grid gap-6 md:grid-cols-2 md:gap-10">
+            {cards.map((card) => (
+              <li key={card.title} className="flex flex-col gap-5 rounded-2xl bg-foreground p-7 md:p-9">
+                <h3 className="border-b-2 border-accent-strong pb-4 text-2xl font-semibold text-accent-strong md:text-[28px]">
+                  {card.title}
+                </h3>
+                <p className="text-ink md:text-lg/[28px]">{card.text}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </PageSection>
   )
 }

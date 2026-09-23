@@ -42,13 +42,13 @@ collections:
             label: Tela inicial
             widget: object
             fields:
-              - { name: eyebrow, label: Etiqueta, widget: string, hint: 'Texto pequeno acima do título.' }
+              - { name: eyebrow, label: Etiqueta, widget: string, hint: 'Texto da pílula azul no topo da seção.' }
               - { name: title, label: Título, widget: string }
               - { name: description, label: Descrição, widget: text }
               - { name: supportLabel, label: Texto do botão de apoio, widget: string }
 
           - name: mission
-            label: Nossa missão
+            label: Missão
             widget: object
             fields:
               - { name: eyebrow, label: Etiqueta, widget: string }
@@ -60,7 +60,7 @@ collections:
                 widget: list
                 fields:
                   - { name: title, label: Título, widget: string }
-                  - { name: text, label: Texto, widget: text, required: false, hint: 'Enquanto estiver vazio, a caixa mostra o espaço reservado do wireframe.' }
+                  - { name: text, label: Texto, widget: text }
 
           - name: whatWeDo
             label: Atuação
@@ -69,6 +69,21 @@ collections:
               - { name: eyebrow, label: Etiqueta, widget: string }
               - { name: title, label: Título, widget: string }
               - { name: description, label: Descrição, widget: text }
+              - name: pillars
+                label: Pilares de atuação
+                label_singular: Pilar
+                widget: list
+                fields:
+                  - { name: icon, label: Ícone, widget: select, options: [code, graduation, users, github] }
+                  - { name: title, label: Título, widget: string }
+                  - { name: description, label: Descrição, widget: text }
+              - name: programs
+                label: Programas
+                label_singular: Programa
+                widget: list
+                fields:
+                  - { name: title, label: Título, widget: string }
+                  - { name: description, label: Descrição, widget: text }
 
           - name: impact
             label: Impacto
@@ -77,13 +92,22 @@ collections:
               - { name: eyebrow, label: Etiqueta, widget: string }
               - { name: title, label: Título, widget: string }
               - { name: description, label: Descrição, widget: text }
-              - name: stats
+              - { name: communityTitle, label: Título do primeiro grupo, widget: string }
+              - name: communityStats
                 label: Números da comunidade
                 label_singular: Número
                 widget: list
                 fields:
-                  - { name: value, label: Número, widget: string, required: false, hint: 'Como deve aparecer na tela, por exemplo 35 ou +50.' }
-                  - { name: label, label: Legenda, widget: string, required: false }
+                  - { name: value, label: Número, widget: string, hint: 'Como deve aparecer na tela, por exemplo 35 ou +50.' }
+                  - { name: label, label: Legenda, widget: string }
+              - { name: networkTitle, label: Título do segundo grupo, widget: string }
+              - name: networkStats
+                label: Números da rede de apoio
+                label_singular: Número
+                widget: list
+                fields:
+                  - { name: value, label: Número, widget: string }
+                  - { name: label, label: Legenda, widget: string }
 
           - name: funding
             label: Financiamento
@@ -92,13 +116,22 @@ collections:
               - { name: eyebrow, label: Etiqueta, widget: string }
               - { name: title, label: Título, widget: string }
               - { name: description, label: Descrição, widget: text }
-              - name: expenses
-                label: Gastos
-                label_singular: Gasto
+              - name: cards
+                label: Caixas de financiamento
+                label_singular: Caixa
                 widget: list
                 fields:
-                  - { name: service, label: Serviço, widget: string, required: false }
-                  - { name: amount, label: Valor em reais, widget: number, value_type: float, min: 0, required: false, hint: 'Só o número, com ponto nos centavos: 757.85' }
+                  - { name: icon, label: Ícone, widget: select, options: [heart, server, refresh, users] }
+                  - { name: title, label: Título, widget: string }
+                  - { name: description, label: Descrição, widget: text }
+              - name: destinations
+                label: Para onde vai o apoio
+                label_singular: Destino
+                widget: list
+                fields:
+                  - { name: icon, label: Ícone, widget: select, options: [server, briefcase, users, star] }
+                  - { name: label, label: Destino, widget: string }
+                  - { name: detail, label: Valor ou detalhe, widget: string, required: false, hint: 'Opcional. Aparece em letra menor abaixo do destino, por exemplo: cerca de R$ 375 por mês.' }
 
           - name: community
             label: Faça parte
@@ -107,28 +140,15 @@ collections:
               - { name: eyebrow, label: Etiqueta, widget: string }
               - { name: title, label: Título, widget: string }
               - { name: description, label: Descrição, widget: text }
-              - name: channels
-                label: Canais da comunidade
-                widget: object
+              - name: personas
+                label: Formas de contribuir
+                label_singular: Forma
+                widget: list
                 fields:
-                  - name: discord
-                    label: Discord
-                    widget: object
-                    fields:
-                      - { name: name, label: Nome, widget: string }
-                      - { name: description, label: Descrição, widget: string }
-                  - name: whatsapp
-                    label: WhatsApp
-                    widget: object
-                    fields:
-                      - { name: name, label: Nome, widget: string }
-                      - { name: description, label: Descrição, widget: string }
-                  - name: github
-                    label: GitHub
-                    widget: object
-                    fields:
-                      - { name: name, label: Nome, widget: string }
-                      - { name: description, label: Descrição, widget: string }
+                  - { name: icon, label: Ícone, widget: select, options: [users, message, briefcase] }
+                  - { name: title, label: Título, widget: string }
+                  - { name: quote, label: Frase em itálico, widget: string, hint: 'As aspas são colocadas pelo site, não escreva aspas aqui.' }
+                  - { name: description, label: Descrição, widget: text }
 
           - name: support
             label: Apoie
@@ -138,6 +158,14 @@ collections:
               - { name: title, label: Título, widget: string }
               - { name: description, label: Descrição, widget: text }
               - { name: supportLabel, label: Texto do botão de apoio, widget: string }
+              - name: tiers
+                label: Valores de apoio
+                label_singular: Valor
+                widget: list
+                fields:
+                  - { name: value, label: Valor, widget: string, hint: 'Como deve aparecer na tela, por exemplo R$2.' }
+                  - { name: title, label: Título, widget: string }
+                  - { name: description, label: Descrição, widget: text }
 
           - name: footer
             label: Rodapé
