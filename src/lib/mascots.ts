@@ -32,3 +32,9 @@ export const MASCOTS = {
 } as const
 
 export type MascotName = keyof typeof MASCOTS
+
+export const MASCOT_DESKTOP_QUERY = '(min-width: 768px)'
+
+export function mascotSrc(name: MascotName, isMobile: boolean) {
+  return `/mascotes/${name}${isMobile ? '-mobile' : ''}.webp`
+}

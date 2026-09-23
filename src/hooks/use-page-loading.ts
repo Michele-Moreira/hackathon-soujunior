@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
+import { MASCOT_DESKTOP_QUERY, mascotSrc } from '@/lib/mascots'
 
 const MINIMUM_MS = 600
 const TIMEOUT_MS = 5000
 const FADE_MS = 400
-const HERO_MASCOT = '/mascotes/inicio.webp'
 
 export const LOADING_STEPS = 3
 
@@ -35,7 +35,7 @@ export function usePageLoading() {
     }
 
     const heroMascot = new Image()
-    heroMascot.src = HERO_MASCOT
+    heroMascot.src = mascotSrc('inicio', !window.matchMedia(MASCOT_DESKTOP_QUERY).matches)
 
     const fontsReady = document.fonts.ready.then(() => advanceTo(1))
     const mascotReady = (heroMascot.decode?.() ?? Promise.resolve())
