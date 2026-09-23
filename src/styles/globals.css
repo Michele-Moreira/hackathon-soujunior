@@ -173,6 +173,9 @@
   [data-reveal-group] > [data-reveal]:nth-child(4) {
     transition-delay: 180ms;
     }
+  [data-reveal-group] > [data-reveal]:nth-child(n + 5) {
+    transition-delay: 240ms;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
