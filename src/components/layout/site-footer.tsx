@@ -15,29 +15,25 @@ export function SiteFooter() {
   const { tagline, links, copyright, campaign } = content.footer
 
   return (
-    <footer className="bg-surface-deep px-9 pt-10 pb-6 md:px-11">
-      <div className="mx-auto w-full max-w-[1636px]">
-        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <SouJuniorLogo className="h-[30px] text-foreground md:h-[34px]" />
-          <ul className="flex flex-wrap items-center gap-x-8 gap-y-2">
-            {FOOTER_LINKS.map(({ id, href }) => (
-              <li key={id}>
-                <ExternalLink
-                  href={href}
-                  className="rounded-sm text-foreground outline-none hover:underline focus-visible:ring-[3px] focus-visible:ring-ring/50"
-                >
-                  {links[id]}
-                </ExternalLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="mt-7 flex flex-col gap-4 border-b border-foreground/15 pb-6 md:grid md:grid-cols-3 md:items-center md:gap-0">
-          <p className="text-foreground/80">{tagline}</p>
-          <div className="flex flex-col items-center gap-1 text-sm">
-            <p className="text-foreground/70">{campaign}</p>
-            <p className="text-foreground">{copyright}</p>
-          </div>
+    <footer className="bg-surface-deep px-9 pt-8 pb-5 md:px-11">
+      <div className="mx-auto flex w-full max-w-[1636px] flex-col gap-5 border-b border-foreground/15 pb-3 md:grid md:grid-cols-3 md:grid-rows-[auto_auto] md:items-center md:gap-x-8 md:gap-y-4">
+        <SouJuniorLogo className="h-[30px] text-foreground md:col-start-1 md:row-start-1 md:h-[34px]" />
+        <ul className="flex flex-wrap items-center gap-x-8 gap-y-2 md:col-start-3 md:row-start-1 md:justify-self-end">
+          {FOOTER_LINKS.map(({ id, href }) => (
+            <li key={id}>
+              <ExternalLink
+                href={href}
+                className="rounded-sm text-foreground outline-none hover:underline focus-visible:ring-[3px] focus-visible:ring-ring/50"
+              >
+                {links[id]}
+              </ExternalLink>
+            </li>
+          ))}
+        </ul>
+        <p className="text-foreground/80 md:col-start-1 md:row-start-2">{tagline}</p>
+        <div className="flex flex-col items-center gap-1 text-sm md:col-start-2 md:row-span-2 md:row-start-1 md:self-center">
+          <p className="text-foreground/70">{campaign}</p>
+          <p className="text-foreground">{copyright}</p>
         </div>
       </div>
     </footer>
