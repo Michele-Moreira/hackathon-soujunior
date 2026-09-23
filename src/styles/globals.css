@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
     --font-display: "Funnel Display", ui-sans-serif, system-ui, sans-serif;
     --font-sans: "Funnel Sans", ui-sans-serif, system-ui, sans-serif;
     --radius-sm: calc(var(--radius) * 0.6);
@@ -144,5 +145,37 @@
     }
   h1, h2, h3 {
     @apply font-display;
+    }
+}
+
+@layer base {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 300ms var(--ease-out),
+      transform 300ms var(--ease-out);
+    }
+  [data-reveal][data-visible],
+  [data-reveal-group][data-visible] > [data-reveal] {
+    opacity: 1;
+    transform: translateY(0);
+    }
+  [data-reveal-group] > [data-reveal]:nth-child(2) {
+    transition-delay: 60ms;
+    }
+  [data-reveal-group] > [data-reveal]:nth-child(3) {
+    transition-delay: 120ms;
+    }
+  [data-reveal-group] > [data-reveal]:nth-child(4) {
+    transition-delay: 180ms;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transform: none;
+    transition-duration: 150ms;
+    transition-delay: 0ms !important;
     }
 }
