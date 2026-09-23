@@ -28,7 +28,7 @@ export function FundingSection() {
           <RevealGroup asChild>
             <ul className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 md:gap-8">
               {cards.map((card) => (
-                <li key={card.title} data-reveal className="flex flex-col gap-4 rounded-lg bg-foreground p-6 md:p-7">
+                <li key={card.title} data-reveal className="flex flex-col gap-4 rounded-lg bg-foreground p-6 shadow-[0_4px_2px] shadow-black/25 md:p-7">
                   <h3 className="flex items-center gap-3 text-lg font-semibold text-accent-strong">
                     <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-accent-strong text-primary-foreground">
                       <ContentIcon name={card.icon} className="size-5" />
