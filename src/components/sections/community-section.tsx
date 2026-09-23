@@ -19,7 +19,7 @@ export function CommunitySection() {
           </h2>
           <p className="max-w-[640px] text-base/[22px] text-foreground/75 md:text-xl/[32px]">{description}</p>
         </div>
-        <MascotImage name="faca-parte" className="mx-auto lg:mx-0" />
+        <MascotImage name="faca-parte" className="mx-auto lg:mx-0 lg:w-[min(570px,80%)]" />
       </Reveal>
       <RevealGroup asChild>
         <ul className="grid gap-6 md:grid-cols-3 md:gap-8">
