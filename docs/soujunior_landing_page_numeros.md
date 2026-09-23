@@ -10,6 +10,7 @@ Conteúdo pronto para a seção de transparência da landing page, em formato de
 
 | | |
 |---|---|
+| **140** | Apoiadores desde o início |
 | **35** | Mentores ativos |
 | **120** | Membros da comunidade |
 | **50+** | Pessoas empregadas através da SouJunior |
